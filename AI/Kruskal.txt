@@ -1,0 +1,17 @@
+Kruskal
+
+Init E <khoi tao tap canh E>
+Init MST <khoi tao cay khung >
+Init dist = 0 <khoi tao do dai cua cay khung> 
+
+Sort E <xap xep cac canh theo thu tu tang dan>
+
+while (MST != n-1 && E) {
+	e = <canh ngan nhat thuoc E>
+	E \ (e)
+	if (MST += e <them (e) vao MST va kiem tra co tao chu trinh khong>)
+	{
+		MST += e <them e vao MST>
+		dist += dist[e] <them do dai canh e vao do dai MST>
+	}
+}

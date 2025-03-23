@@ -1,0 +1,3 @@
+Ta có a => b = not(a) or b
+Mà a = true nên not(a) = false
+Để a => b = true thì b phải bằng true

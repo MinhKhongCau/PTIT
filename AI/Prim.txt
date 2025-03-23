@@ -1,0 +1,20 @@
+Prim 
+
+Init E <khoi tao danh sach canh E>
+Init MST <khoi tao spanning tree>
+Init PiorityQueue 
+Stack.push(e) <them canh e la canh nho nhat>
+
+while (PiorityQueue <kiem tra piority rong khong>) {
+	s = PiorityQueue.top()
+	PiorityQueue.pop()
+	if (!visited[s]) {
+		visited[s] = true
+		for (v <- E <duyet tat ca cac canh ke s>) {
+			PiorityQueue.push(v)
+			dist += dist[v];
+		}
+	}
+}
+
+
