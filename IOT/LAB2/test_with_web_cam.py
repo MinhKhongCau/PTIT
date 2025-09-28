@@ -2,8 +2,9 @@ import cv2
 from ultralytics import YOLO
 import until  
 
-# Load YOLOv8 face detector (pretrained)
-model = YOLO("yolov8n-face.pt")  # yolov8n-face là version nhẹ
+svm_model = until.load_finetuned_svm_model()
+resnet50_fe_model = until.load_resnet50_fe_model()
+yolo_model = until.load_yolo_model()
 
 # Mở webcam
 cap = cv2.VideoCapture(0)
@@ -17,7 +18,7 @@ while True:
         break
 
     # Detect faces
-    label, (x1, y1, x2, y2) = until.crop_face_and_predict(frame)
+    label, (x1, y1, x2, y2) = until.crop_face_and_predict(frame, yolo_model, svm_model, resnet50_fe_model)
     if label is None:
         continue
 
