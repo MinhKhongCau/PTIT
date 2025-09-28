@@ -1,5 +1,6 @@
 
-**/model/
+**/model/my_model.keras
+**/model/resnet50_feature_extractor.h5
 **/dataset/
 **/processed_dataset/
 **/clear_dataset/
