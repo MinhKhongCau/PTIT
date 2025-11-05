@@ -6,7 +6,7 @@ import time
 
 # --- CẤU HÌNH BẮT BUỘC CHO SERVER LOCAL ---
 # 1. Thay thế bằng URL của server Flask của bạn
-LOCAL_API_URL = "http://localhost:5000/predict" 
+LOCAL_API_URL = "http://54.206.102.233:5000/predict" 
 
 # --- KHỞI TẠO CAMERA ---
 cap = cv2.VideoCapture(0)
