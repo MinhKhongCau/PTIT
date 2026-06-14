@@ -1,0 +1,234 @@
+\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+
+\section{Cơ sở lý thuyết}
+\subsection{Trí tuệ nhân tạo}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Hinhve/ai.png}
+	\caption{Sơ đồ tổng quan về trí tuệ nhân tạo}
+	% \label{fig:ai}
+\end{figure}
+Trí tuệ nhân tạo (AI) \cite{chun2023representation} là một lĩnh vực nghiên cứu trong ngành công nghiệp công
+nghệ máy tính với mục tiêu tạo ra các hệ thống máy tính có khả năng thực hiện các
+nhiệm vụ đòi hỏi sự hiểu biết, học hỏi, và ra quyết định mà trước đây chỉ có con người
+mới có khả năng thực hiện được. Trí tuệ nhân tạo mô phỏng khả năng "tư duy" của
+con người thông qua việc phát triển và triển khai các thuật toán máy học, học sâu, và
+các phương pháp khác.
+
+Lịch sử của trí tuệ nhân tạo bắt đầu từ những ý tưởng sơ khai từ thập kỷ 1940,
+nhưng nó đã phát triển mạnh mẽ trong những năm gần đây nhờ vào sự tiến bộ đáng kể trong lĩnh vực máy học và nguồn dữ liệu lớn có sẵn. Một số thành tựu nổi bật của trí
+tuệ nhân tạo bao gồm việc nhận diện giọng nói, nhận diện hình ảnh, tự động lái xe,
+chơi cờ vua ở mức độ chuyên nghiệp, \dots
+\subsection{Học sâu}
+Deep Learning là một lĩnh vực của trí tuệ nhân tạo tập trung vào việc sử dụng mạng nơ-ron nhân tạo với nhiều lớp để mô hình hóa và giải quyết các bài toán phức tạp như nhận dạng hình ảnh và xử lý ngôn ngữ tự nhiên \cite{gupta2018introduction}. Một trong những kiên trúc quan trọng trong Deep Learning là Convolutional Neural Network (CNN), được thiết kế đặc biệt để xử lý dữ liệu dạng lưới như hình ảnh, qua đó tự động học và trích xuất các đặc trưng mà không cần khai thác thủ công \cite{o2015introduction}.
+\subsection{Mạng neuron nhân tạo và Mạng neuron tích chập}
+Mạng nơ-ron nhân tạo, hay Artificial Neural Network \cite{hassoun1995fundamentals} (ANN), là khái niệm
+quan trọng và là nền tảng cho các kiến trúc mạng sau này, được thiết kế để mô phỏng
+cách hoạt động của não người. Với sự linh hoạt và khả năng tự động hóa của ANN làm
+cho chúng trở thành công cụ quan trọng trong giải quyết những vấn đề phức tạp và đưa
+ra dự đoán chính xác trong nhiều bài toán hiện nay. ANN có khả năng học từ kinh
+nghiệm và dữ liệu (thông qua quá trình huấn luyện), có thể áp dụng cho nhiều ứng
+dụng trong các lĩnh vực khác nhau có thể kể đến như: xử lý ngôn ngữ tự nhiên, dự đoán, tự động hóa, phát hiện dị thường
+\subsubsection{Tổng quan mạng neuron nhân tạo}
+Mạng neuron nhân tạo mô phỏng lại cấu trúc của bộ não con người bao gồm các lớp
+nneuron được liên kết với nhau thông qua các cạnh, trong mỗi lớp neuron gồm có các
+neuron nhân tạo đại diện cho lớp đó. Số lượng lớp neuron và số lượng neuron trong
+mỗi lớp phụ thuộc vào cách thiết kế với từng nhiệm vụ cụ thể nào đó.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Hinhve/neuron.png}
+	\caption{Mô tả một neuron sinh học và một neuron nhân tạo}
+	% \label{fig:ai}
+\end{figure}
+Để làm rõ hơn, tương tự như cách hoạt động của 1 mạng neuron sinh học, mạng neuron nhân tạo cũng nhận dữ liệu đầu vào (input) bao gồm các giá trị \(x_1, x_2, .., x_n\), xử
+lý tín hiệu bằng cách nhân dữ liệu này với trọng số tương ứng \(w_1, w_2, .., w_n\), còn
+được gọi là weight, tính tổng thông qua hàm sum sau đó đi qua 1 hàm kích hoạt
+(activation function) để phá vỡ liên kết tuyến tính và thu được kết quả đầu ra (output).
+Ở quá trình trên, giá trị trọng số weight đóng 1 vai trò quan trọng. Nó quyết định
+mức độ ảnh hưởng ít hay nhiều của 1 giá trị đầu vào \(x\) nào đó, thể hiện mức độ quan
+trọng của điểm dữ liệu đó với kết quả đầu ra. Ngoài ra, hàm kích hoạt cũng đóng một
+vai trò quan trọng không kém cái mà sẽ quyết định cách thức mô hình hoá phi tuyến
+giữa dữ liệu đầu vào và kết quả đầu ra.
+\subsubsection{Cấu trúc của một mạng neuron nhân tạo đơn giản}
+Một mô hình mạng neuron nhân tạo gồm nhiều lớp neuron liên kết với nhau, mỗi
+lớp neuron bao gồm nhiều neuron. Mỗi neuron tại một lớp bất kì đều liên kết đến tất cả
+neuron ở lớp trước và lớp sau nó. Một mạng neuron đơn giản gồm ba lớp chinh: lớp
+đầu vào, lớp đầu ra và lớp ẩn. Lớp đầu vào chính là lớp đầu tiên của mạng neuron, với từng loại tác vụ. Các lớp nằm giữa hai lớp trên được gọi chung là lớp ẩn.
+\subsubsection{Lan truyền thằng}
+Lan truyền thẳng (Feedforward) trong mạng trí tuệ nhân tạo là quá trình dữ liệu đầu
+vào được truyền qua các lớp neuron bên trong mạng, qua quá trình tính toán, xử lý tại
+mỗi neuron tại từng lớp và đưa ra kết quả cuối cùng tại lớp neuron cuối cùng mà không
+có sự giám sát hoặc điều chỉnh bên ngoài tác động vào. Đây là quá trình quan trọng
+của một mạng neuron để tạo ra đầu ra hoặc dự đoán dựa trên dữ liệu đầu vào một cách
+tự động.
+\subsubsection{Lan truyền ngược và đạo hàm}
+Không giống như lan truyền thẳng – quá trình tính toán dữ liệu đầu vào để đưa ra
+kết quả đầu ra hoặc dự đoán, lan truyền ngược là quá trình tinh giúp mạng neuron nhân
+tạo tự động tính chỉnh lại các giá trị trọng số và các hệ số tự do thông qua quá trình huấn luyện và giá trị trả về của hàm mất mát. Sau khi nhận được giá trị dự đoán thông
+qua quá trình lan truyền thằng, các kết quả dự đoán được so sánh với giá trị mong
+muốn thực tế để từ đó tính ra sai số thông qua một hàm mất mát được đĩnh nghĩa sẵn.
+Sau đó, hàm mất mát được lan truyền ngược từ lớp neuron đầu ra về lớp neuron đầu
+vào để tính toán đạo hàm theo từng trọng số và hệ số tự do trong mạng neuron. Các giá
+trị trọng số và hệ số tự do được cập nhật thông qua phương pháp tối ưu gradient
+descent để kích thích các giá trị đạo hàm dần dần về hướng hội tụ.
+\subsubsection{Hàm kích hoạt}
+Hàm kích hoạt là một yếu tố quan trọng quyết định sự linh hoạt và hiệu suất của mô
+hình. Khái niệm này không chỉ dừng lại ở việc mô phỏng lại các tính chất của não
+người mà còn đóng vai trò quan trọng trong việc đưa ra dự đoán (lan truyền xuôi) và
+quá trình tự học (lan truyền ngược). Số lượng hàm kích hoạt rất đa dạng, có thể là hàm
+tuyến tính hoặc phi tuyến, điều này có ảnh hưởng quan trọng đến việc mô hình có thể
+học được các đặc trưng phức tạp từ dữ liệu hay không.
+\begin{itemize}
+	\item Sigmoid
+	      Công thức toán học: \(\sigma(z) = \frac{1}{1 + e^{-z}}\)
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[width=0.8\linewidth]{Hinhve/sigmoid.png}
+		      \caption{Công thức và đồ thị hàm Sigmoid}
+		      % \label{fig:ai}
+	      \end{figure}
+	      Đây là hàm phi tuyến giới hạn đầu ra trong khoảng giá trị [0,1]. Hàm này ít khi
+	      được sử dụng trong các mô hình thực tế do sự tốn kếm về mặt tính toán, cũng như dễ
+	      gây ra các vấn đề về đạo hàm tiến gần tới 0. Hàm kích hoạt này thường được sử dụng
+	      cho các bài toán phân loại nhị phân và hay được sử dụng làm hàm kích hoạt mẫu cho
+	      người mới tiếp cận trí tuệ nhân tạo.
+	\item Tanh
+	      Công thức toán học: \(\tanh(z) = \frac{e^{z} - e^{-z}}{e^{z} + e^{-z}}\)
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[width=0.8\linewidth]{Hinhve/tanh.png}
+		      \caption{Đồ thị hàm Tanh}
+		      \label{fig:ai}
+	      \end{figure}
+	      Đây là hàm phi tuyến giới hạn đầu ra trong khoảng giá trị [$-1,1$]. Hàm kích hoạt
+	      tanh cũng có nhước điểm tương tự với hàm sigmoid() khi giá trị đạo hàm là rất nhỏ với
+	      các đầu vào có trị tuyệt đối lớn, gây ra tốn kếm về mặt tính toán.
+	\item ReLU
+	      Công thức toán học: \(\text{ReLU}(z) = \max(0, z)\)
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[width=0.8\linewidth]{Hinhve/relu.png}
+		      \caption{Đồ thị hàm ReLU}
+		      % \label{fig:ai}
+	      \end{figure}
+	      Đây là hàm phi tuyến giới hạn đầu ra trong khoảng giá trị [$0, \inf$]. Hàm kích hoạt
+	      ReLU (Rectified Linear Unit) đóng vai trò quan trọng trong lĩnh vực mạng trí tuệ nhân
+	      tạo, với tính chất đơn giản nhưng mạnh mẽ. Hàm trả về giá trị 0 nếu đầu vào là âm và
+	      giữ nguyên giá trị dương nếu đầu vào là dương. Tính chất phi tuyến tính của ReLU
+	      giúp mô hình có khả năng học được các biểu diễn phức tạp từ dữ liệu và giảm vấn đề
+	      "vanishing gradient" trong quá trình lan truyền ngược. Điều này giúp tăng cường khả
+	      năng hiệu quả và tốc độ học của mô hình. Mặc dù ReLU có nhược điểm là có thể dẫn
+	      đến "dead neurons" khi các trọng số được cập nhật sao cho đầu vào của neuron trở nên
+	      âm gây ra hiện tượng giá trị đầu ra bằng 0, và nó chỉ hoạt động cho các giá trị dương,
+	      nhưng tính đơn giản khiến ReLU trở thành lựa chọn ưa thích trong nhiều kiến trúc mô
+	      hình hiện đại. Ngoài ra, để giải quyết nhược điểm của ReLU, một số biến thể khác của
+	      nó đã được tận dụng như Leaky ReLU hay Parametric ReLU.
+	\item Softmax
+	      Công thức toán học: \(\sigma(\mathbf{z})_i = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}\)
+	      \begin{figure}[H]
+		      \centering{}
+		      \includegraphics[width=1.1\linewidth]{Hinhve/softmax.png}
+		      \caption{Minh hoạ kết quả sau khi đi qua hàm Softmax}
+		      % \label{fig:ai}
+	      \end{figure}
+	      Hàm softmax là một dạng tổng hợp hơn của sigmoid, thường được sử dụng trong
+	      các bài toán phân loại nhiều lớp. Tương tự như hàm sigmoid, mỗi giá trị đầu ra của
+	      hàm softmax đều nằm trong khoảng [0,1] với tổng các giá trị đầu ra luôn luôn bằng 1.
+	      Điều này giúp tạo ra một phân phối xác suất diễn giải được, làm cho mô hình không
+	      quá chắc chắn khi đưa ra dự đoán, tránh trường mô hình bị hiện tượng overfit vào một
+	      nhãn phân loại nào đó.
+
+\end{itemize}
+Mạng neurono tích chập  (CNN) thể hiện sự tương đồng với mạng neuron nhân
+tạo thông thường, bao gồm neuron có khả năng học trọng số và hệ số tự do. Mỗi neuron trong CNN nhận đầu vào, thực hiện phép tích vô hướng và có thể được kích hoạt
+bằng hàm phi tuyến tùy chọn, với hàm Softmax thường được sử dụng ở lớp cuối cùng.
+Cả hai loại mạng chia sẻ các kỹ thuật và thủ thuật trong quá trình huấn luyện. Tuy
+nhiên, điểm đặc biệt là CNN tiếp cận dữ liệu ảnh hoặc mảng nhiều chiều mà không
+cần chuyển đổi thành véc-tơ một chiều như mạng neuron truyền thống. Điều này cho
+phép CNN trích xuất thuộc tính đặc trưng, đặc biệt là các thuộc tính địa phương, mà
+không làm mất cấu trúc dữ liệu. So với mạng neuron truyền thống, CNN giúp giảm
+đáng kể số lượng tham số tính toán, tối ưu hóa tài nguyên tính toán và giảm nguy cơ
+overfitting. Thiết kế của CNN nhằm khắc phục nhược điểm của mạng neuron truyền
+thống trong xử lý ảnh, mang lại hiệu suất chuyển tiếp tốt hơn và mô hình với số lượng
+tham số giảm đáng kể.
+
+\subsection{Face Embedding}
+Face Embedding là kỹ thuật chuyển đổi khuôn mặt từ hình ảnh thành dạng vector số trong không gian đa chiều, giúp lưu trữ đặc trưng nhận dạng khuôn mặt một cách ngắn gọn và hiệu quả. Quá trình này thường sử dụng các mô hình học sâu nhằm trích xuất các đặc trưng như khoảng cách giữa các điểm trên khuôn mặt, từ đó biểu diễn khuôn mặt dưới dạng vectơ không phụ thuộc vào ánh sáng hay góc nhìn \cite{schroff2015facenet}
+\subsection{Similarity Search}
+Similarity Search là phương pháp tìm kiếm các đối tượng tương tự dựa trên đặc trưng hoặc vector đặc trưng, khác với tìm kiếm truyền thống dựa trên kết quả chính xác, nó cho phép truy xuất dữ liệu gần giống với đối tượng truy vấn \cite{swaminathan2020gender}
+Ý tưởng: khi hai ảnh càng giống nhau (cùng 1 người), thì khoảng cách giữa chúng càng bé và ngược lại, hai ảnh càng khác nhau thì khoảng cách càng phải lớn.
+Với cách tiếp cận này, ta thường định nghĩa một ngưỡng threshold. Ta sẽ so sánh ảnh input với tất cả các ảnh trong dataset, và nếu khoảng cách nằm dưới ngưỡng cho phép, ta sẽ lấy các ảnh đó làm output.
+\subsection{Learning similarity}
+Là phương pháp tìm kiếm, ta định nghĩa 1 ngưỡng threshold. Ta sẽ so sánh ảnh input với tất cả ảnh trong dataset. Nếu ảnh nằm trên ngưỡng cho phép, ta sẽ lấy các ảnh đó làm output. Như vậy kết quả trả về có thể 1 hoặc nhiều ảnh giống với ý tưởng của thuật toán k-NN.
+\subsection{CosFace}
+CosFace là một phương pháp cải tiến trong nhận diện khuôn mặt, sử dụng hàm mất mát Large Margin Cosine Loss nhằm tăng sự phân biệt giữa các lớp khuôn mặt trong không gian góc, từ đó nâng cao độ chính xác nhận diện \cite{wang2018cosfacelargemargincosine}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Hinhve/cosface.png}
+	\caption{Giới thiệu về CosFace}
+	\label{fig:cosface}
+\end{figure}
+CosFace bổ sung biên độ cosine (cosine margin) thay thế hàm Softmax để tăng khả năng phân tách giữa các vector đặc trưng khuôn mặt. Điều này giúp hệ thống phân biệt tốt hơn các cá nhân có đặc điểm khuôn mặt tương tự nhau, từ đó nâng cao độ chính xác trong việc nhận diện người mất tích.
+\[\cos(\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{||\mathbf{A}|| \cdot ||\mathbf{B}||}\]
+
+Ý tưởng chính
+\begin{itemize}
+	\item Thay vì chỉ tối ưu phân loại như Softmax truyền thống, CosFace giới thiệu biên độ cosine (cosine margin) trong không gian đặc trưng.
+	\item Cách này giúp tăng khoảng cách giữa các lớp khác nhau và giảm sự chồng lấn giữa các mẫu cùng lớp $\rightarrow$ tạo ra các embedding khuôn mặt có tính phân biệt mạnh hơn.
+	\item CosFace so sánh với các hàm loss cải tiến và cho thấy hiệu quả cao nhờ tối ưu trực tiếp trên không gian cosine
+\end{itemize}
+\subsection{Siamese Network}
+Siamese network được xây dựng dựa trên network là một CNN architecture đã được loại bỏ output layer, có tác dụng encoding ảnh thành vector embedding.
+
+Đầu vào của mạng Siamese network là 2 bức ảnh bất kì được lựa chọn ngẫu nhiên từ dữ liệu ảnh. Output của Siamese network là 2 vector tương ứng với biểu diễn của 2 ảnh input. Sau đó chúng ta đưa 2 véc tơ vào hàm loss function để đo lường sự khác biệt giữa chúng.
+
+\[L_s = \frac{1}{N} \sum_{i=1}^{N} -\log p_i = \frac{1}{N} \sum_{i=1}^{N} -\log \frac{e^{f_{y_i}}}{\sum_{j=1}^{C} e^{f_j}}
+\]
+\section{Bộ dữ liệu huấn luyện}
+Dataset hay bộ dữ liệu là  một bộ sưu tập data có cấu trúc. Data thể hiện thông tin có thể được biểu diễn dưới dạng văn bản, số hoặc phương tiện như hình ảnh, âm thanh hoặc tệp video.
+
+Dataset đóng vai trong huấn luyện học máy, học sâu như một tập tri thức đưa vào mô hình để chúng học hỏi, từ đó đưa ra những phán đoán cho các dữ liệu đầu vào khác.
+
+Mô hình trong đồ án được huấn luyện trên hai tập dataset bao gồm:
+\subsection{Pins Face Recognition}
+Bộ dữ liệu này được thu thập từ các hình ảnh trên Pinterest \cite{pinFace}. Thường dùng cho tác vụ "Face Identification" (Nhận dạng khuôn mặt), tức là trả lời câu hỏi: "Bức ảnh này là của ai trong số 105 người này?". Nó rất phù hợp để huấn luyện các mô hình phân loại (classification) từ đầu. Chứa khoảng 17.500 hình ảnh.
+\subsection{LFW (Labeled Faces in the Wild)}
+LFW \cite{huang:inria-00321923} là một bộ sưu tập các hình ảnh khuôn mặt được thu thập trực tiếp từ Internet (chủ yếu là tin tức). Tên gọi "in the Wild" (trong tự nhiên) có nghĩa là các bức ảnh này không được chụp trong phòng studio. Chúng có điều kiện rất đa dạng và đầy thách thức:
+\begin{itemize}
+	\item Ánh sáng khác nhau (tối, lóa, ngược sáng).
+	\item Các góc mặt khác nhau (nghiêng, cúi, ngửa).
+	\item Biểu cảm đa dạng (cười, mếu, ngạc nhiên).
+	\item Thường bị che khuất một phần (đeo kính, đội mũ, tóc che).
+\end{itemize}
+Chứa hơn 13.000 hình ảnh của 5.749 người khác nhau.
+\section{Công nghệ sử dụng}
+\subsection{Express}
+Express là một framework ứng dụng web phổ biến, được xây dựng trên nền tảng Node.js, nhằm mục đích đơn giản hóa và tăng tốc quá trình phát triển các ứng dụng web và API. Được thiết kế với tính mô-đun và linh hoạt cao, Express cho phép các nhà phát triển dễ dàng quản lý routing – tức là xác định cách ứng dụng phản hồi các yêu cầu HTTP dựa trên URL và phương thức (GET, POST, PUT, DELETE,...) \cite{expressjsExpressNodejs}. Một điểm nổi bật của Express là hệ thống middleware mạnh mẽ, cho phép xử lý các yêu cầu một cách tuần tự thông qua các lớp trung gian, từ đó tăng khả năng kiểm soát và mở rộng ứng dụng. Middleware có thể thực hiện chức năng như xác thực người dùng, xử lý lỗi, hay ghi nhật ký (logging). Express cũng hỗ trợ phục vụ tập tin tĩnh (hình ảnh, CSS, JavaScript) qua middleware express.static, rất cần thiết cho các ứng dụng web hoàn chỉnh. Việc cài đặt Express cực kỳ đơn giản với npm install express --save, giúp nhà phát triển nhanh chóng bắt đầu dự án của mình. Ngoài ra, Express còn hỗ trợ template engine giúp dựng giao diện HTML từ server-side, tích hợp dễ dàng với các cơ sở dữ liệu và hệ thống xác thực. Từ những điểm trên, Express trở thành nền tảng backend phổ biến cho các ứng dụng web hiện đại, đặc biệt là các ứng dụng SPA (Single Page Application) phối hợp với frontend như React hoặc Angular.
+\subsection{Node.js}
+Node.js là môi trường thực thi JavaScript phía server, sử dụng engine V8 của Google để chạy mã nhanh và hiệu quả, đặc biệt phù hợp với các ứng dụng cần xử lý dữ liệu theo thời gian thực và đa kết nối. Node.js cũng là nền tảng cho nhiều công cụ phát triển, framework như Express, Koa,... với hệ sinh thái npm rất lớn, chứa hàng trăm nghìn package mở rộng. Node.js hỗ trợ các API mạnh để thao tác file hệ thống, mạng, stream dữ liệu, cũng như tích hợp với các cơ sở dữ liệu phổ biến \cite{key}
+\subsection{Open CV}
+OpenCV là thư viện mã nguồn mở phổ biến dành cho xử lý ảnh và thị giác máy tính, cung cấp hàng loạt các thuật toán và công cụ để nhận dạng khuôn mặt, phân tích video, và nhiều ứng dụng AI khác \cite{opencvOpenCVOpenCV}. OpenCV tích hợp được với nhiều ngôn ngữ lập trình như C++, Python, Java, và có thể chạy trên nhiều nền tảng máy tính khác nhau. Các thuật toán OpenCV bao gồm xử lý ảnh cơ bản như lọc nhiễu, chuyển đổi màu sắc, biên mờ, cũng như các kỹ thuật cao cấp hơn như phát hiện cạnh, trích xuất đặc trưng, mô hình hóa chuyển động, phát hiện khuôn mặt và phân loại đối tượng. Nhờ tính linh hoạt và hiệu suất cao, OpenCV được sử dụng rộng rãi trong các hệ thống robot, xe tự hành, thiết bị giám sát thông minh và nhiều ứng dụng AI công nghiệp khác.
+\subsection{React}
+React là thư viện JavaScript phát triển bởi Facebook để xây dựng giao diện người dùng phía client, nổi bật với khả năng tạo các component tái sử dụng và cập nhật giao diện hiệu quả bằng Virtual DOM \cite{reactReact}
+\subsection{Python}
+Python là ngôn ngữ lập trình đa năng, phổ biến trong khoa học dữ liệu và phát triển AI nhờ cú pháp đơn giản và thư viện phong phú như NumPy, Pandas, Scikit-learn \cite{python}.Python có một hệ sinh thái phong phú các thư viện phục vụ các mục đích khác nhau, trong đó có NumPy và Pandas cho xử lý dữ liệu, Scikit-learn cho machine learning, TensorFlow và PyTorch cho deep learning, Flask/Django cho phát triển web. Python còn hỗ trợ đa nền tảng và có khả năng tích hợp tốt với các ngôn ngữ khác như C/C++. Đặc biệt, Python được ưa chuộng trong nghiên cứu và công nghiệp AI nhờ tính dễ đọc, giúp triển khai nhanh và dễ bảo trì các mô hình học máy.
+\subsection{TensorFlow}
+TensorFlow là framework mã nguồn mở phát triển bởi Google dành cho machine learning và deep learning, hỗ trợ xây dựng, huấn luyện và triển khai các mô hình AI trên nhiều nền tảng \cite{tensorflowTensorFlow}. TensorFlow hỗ trợ biểu diễn dữ liệu dưới dạng đồ thị tính toán (computational graph) cho phép thực hiện các phép biến đổi phức tạp một cách hiệu quả trên CPU, GPU, hoặc TPU. TensorFlow cung cấp nhiều công cụ và API cấp cao như Keras để xây dựng các tầng mạng nơ-ron nhanh chóng, đồng thời có thể triển khai mô hình trên nhiều nền tảng khác nhau từ máy tính cá nhân đến điện toán đám mây và thiết bị di động. TensorFlow cũng hỗ trợ huấn luyện phân tán và tối ưu hóa mô hình, được dùng nhiều trong nghiên cứu và phát triển sản phẩm AI quy mô lớn.
+\subsection{Microsoft SQL Server}
+Microsoft SQL Server là hệ quản trị cơ sở dữ liệu quan hệ (RDBMS) phát triển bởi Microsoft, hỗ trợ người dùng lưu trữ, tổ chức, quản lý và truy vấn dữ liệu hiệu quả. SQL Server nổi bật với khả năng bảo mật cao, tích hợp công cụ sao lưu và phục hồi, tối ưu hóa truy vấn và hỗ trợ phân tích dữ liệu lớn (big data). Nó hỗ trợ chuẩn SQL để tương tác với cơ sở dữ liệu và cung cấp công cụ quản lý đồ sộ như SQL Server Management Studio (SSMS). SQL Server thường được sử dụng trong các doanh nghiệp lớn, ứng dụng tài chính, thương mại điện tử,... nhờ khả năng đảm bảo tính toàn vẹn và hiệu suất cao cho các hệ thống dữ liệu phức tạp \cite{wikipediaMicrosoftServer}
+\subsection{Amazon Web Services}
+Amazon Web Services (AWS) \cite{kewate2022review} là nền tảng dịch vụ đám mây an toàn, mang đến khả năng tính toán, lưu trữ cơ sở dữ liệu, phân phối nội dung và các chức năng khác nhằm giúp các doanh nghiệp mở rộng và phát triển.
+
+Trước đây muốn có một trang web hay một ứng dụng nào đó, các công ty đều phải có hệ thống server vật lý của riêng mình. Việc mua các thiết bị phần cứng đã tốn kém rồi, việc lắp đặt và cài cắm cho chúng hoạt động càng tốn thời gian hơn. Hơn nữa, việc vận hành vào bảo trì sẽ cần có nhân viên IT chuyên trách, khó khăn trong việc mở rộng khi lượng người dùng tăng cao, hay giảm xuống trong các giờ thấp điểm - Khả năng mở rộng rất thấp. Tóm lại là chi phí rất cao. Điện toán đám mây là giải pháp cho vấn đề này.
+\subsection{ChromaDB}
+ChromaDB là một cơ sở dữ liệu vector tiên tiến, được thiết kế đặc biệt cho các ứng dụng trí tuệ nhân tạo yêu cầu lưu trữ và truy xuất các embeddings (vectơ đặc trưng được trích xuất bởi các mô hình học sâu). ChromaDB tối ưu cho các nhiệm vụ tìm kiếm similarity search, giúp nhanh chóng xác định các đối tượng tương tự dựa trên các đặc trưng số hóa phức tạp. Hệ thống này hỗ trợ truy vấn dữ liệu đa chiều, dựa trên khoảng cách cosine hoặc Euclidean, phục vụ các ứng dụng như nhận dạng khuôn mặt, tìm kiếm hình ảnh, lọc nội dung và nhiều lĩnh vực AI khác. ChromaDB còn có khả năng mở rộng quy mô hiệu quả và tích hợp dễ dàng với các pipeline AI hiện đại, là một thành phần trọng yếu trong hệ sinh thái dữ liệu AI hiện nay \cite{trychromaChroma}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Hinhve/chromadb.png}
+	\caption{Giới thiệu về ChromaDB}
+	\label{fig:chromadb}
+\end{figure}
+
+
+\end{document}

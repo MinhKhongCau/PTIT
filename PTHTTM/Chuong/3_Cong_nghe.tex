@@ -1,0 +1,856 @@
+\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+\section{Mô hình nghiệp vụ của hệ thống}
+\subsection{Sơ đồ cơ cấu}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Hinhve/31.png}
+	\caption{Sơ đồ cơ cấu}
+\end{figure}
+\subsection{Chức năng từng bộ phận}
+\begin{itemize}
+	\item Quản trị hệ thống: duy trì, bảo trì hệ thống, quản lý tài khoản người dùng.
+	\item Cảnh sát: Cơ quan cảnh sát, người chịu trách nhiệm xem xét, tiếp nhận báo cáo mất tích, lập hồ sơ tìm kiếm đưa lên hệ thống để bắt đầu tìm kiếm dựa trên dữ liệu thu thập được.
+	\item Người báo cáo mất tích: Người thân hoặc gia đình, có trách nhiệm cung cấp thông tin như ảnh, video, tên, tuổi, thời gian có thể mất tích, nơi nhìn thấy lần cuối cùng, … những thông tin có thể giúp ích cho việc tìm kiếm, cung cấp cho nơi lập hồ sơ mất tích như cục cảnh sát.
+	\item Người tìm kiếm: Có thể là người lập hồ sơ, cảnh sát, hoặc tham gia hệ thống như một tình nguyện viên, được cung cấp thông tin người mất tích có cự ly gần với vị trí của người tìm thấy, có thể báo cáo lên hệ thống và cung cấp bằng chứng rằng có thể tìm thấy người bị mất tích.
+\end{itemize}
+\section{Quy trình nghiệp vụ}
+\subsection{Tạo, Xác Minh và Quản Lý Hồ Sơ Người Mất Tích}
+\begin{itemize}
+	\item Tiếp nhận thông tin
+	      \begin{itemize}
+		      \item Người báo cáo mất tích tới cơ quan có thẩm quyền gần nhất để báo cáo về ca mất tích cho người lập hồ sơ
+		      \item Người báo cáo mất tích cung cấp hồ sơ người bị mất tích cho người lập hồ sơ bao gồm các thông tin cơ bản như: họ và tên, tuổi, giới tính, hình ảnh hoặc video có chứa khuôn mặt của người bị mất tích, thời điểm gần nhất còn liên lạc với người bị mất tích, địa điểm lần cuối nhìn thấy người mất tích.
+	      \end{itemize}
+	\item Lập hồ sơ người mất tích
+	      \begin{itemize}
+		      \item Báo cáo người mất tích phải đảm bảo được 24 giờ sau
+	      \end{itemize}
+	\item Ra quyết định với hồ sơ mất tích
+	      \begin{itemize}
+		      \item Sau khi đã xác nhận đầy đủ thông tin, người lập hồ sơ tiến hành đưa hồ sơ người mất tích vào hệ thống.
+		      \item Hồ sơ người mất tích đặt ở trạng thái ban đầu là ‘Đang tìm kiếm’
+	      \end{itemize}
+\end{itemize}
+\subsection{Thông báo kết quả}
+\begin{itemize}
+	\item Nếu có bất kỳ thông báo nào đối với hồ sơ mà người dùng đang được theo dõi, người dùng sẽ được gửi thông báo kèm theo hình ảnh xác minh, thời gian, địa điểm
+	\item Nếu trường hợp xác nhận là đúng, hồ sơ sẽ được chuyển về trạng thái ‘Đã tìm thấy’, đóng hồ sơ, ngoại trừ cơ quan có thẩm quyền thì những người khác sẽ không được phép thấy lại hồ sơ.
+	\item Nếu không, hồ sơ vẫn tiếp tục ở trạng thái ‘Đang tìm kiếm’.
+\end{itemize}
+\subsection{Thêm người tìm kiếm vào hệ thống}
+\begin{itemize}
+	\item Người tìm kiếm đến lập hồ sơ tham gia hệ thống với cơ quan cảnh sát, người tìm kiếm cung cấp thông tin cá nhân bao gồm: họ tên, số CCCD/CMND, hình ảnh, nơi ở hiện tại, … cũng như cam kết các điều khoản trong hệ thống.
+	\item Sau khi tham gia, người tìm kiếm được cấp thông tin đăng nhập vào hệ thống.
+	\item Sau khi đăng nhập vào hệ thống người tìm kiếm sẽ thấy được các hồ sơ mất tích.
+	\item Hồ sơ mất tích được xếp theo ưu tiên có địa điểm mất tích gần với người tìm kiếm
+\end{itemize}
+\subsection{Người tìm kiếm báo cáo kết quả}
+\begin{itemize}
+	\item Người tìm kiếm hoặc cảnh sát cung cấp bằng chứng xác thực hồ sơ mất tích bao gồm: địa điểm, thời gian, hình ảnh hoặc video có thể so khớp với dữ liệu trên hệ thống
+	\item Hệ thống xác nhận kết quả và gửi cho cảnh sát
+\end{itemize}
+\subsection{Hệ thống báo cáo kết quả}
+\begin{itemize}
+	\item Cảnh sát xác nhận kết quả
+	\item Nếu kết quả cảnh sát xác nhận là đúng thì gửi thông báo cho người lập hồ sơ mất tích
+	\item Nếu kết quả sai, hồ sơ vẫn được để ở trạng thái 'Đang tìm kiếm'
+\end{itemize}
+\subsection{Yêu cầu chức năng}
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{p{1cm}p{5cm}p{7cm}}
+		\hline
+		\textbf{STT} & \textbf{Yêu cầu}             & \textbf{Ý nghĩa}                                                                                                                   \\ \hline
+		1            & Quản lý người dùng           & Đăng nhập, phân quyền cho 3 vai trò: người báo cáo mất tích, người tìm kiếm, cảnh sát                                              \\ \hline
+		2            & Quản lý hồ sơ mất tích       & Cho phép người báo cáo mất tích theo dõi hồ sơ mất tích, người tìm kiếm và cảnh sát theo dõi các hồ sơ mất tích chưa được tìm thấy \\ \hline
+		3            & Quản lý tài khoản người dùng & Tạo tài khoản tham gia hệ thống cho 2 vai trò: người báo cáo mất tích, người tìm kiếm, khóa tài khoản,....
+		\\ \hline
+		4            & Hệ thống thông báo           & Hệ thống tự động thông báo kết quả cho cảnh sát và người báo cáo mất tích đối với hồ sơ mất tích cụ thể
+		\\ \hline
+		5            & Hệ thống kiểm tra            & Hệ thống tự động kiểm tra, so khớp bằng chứng được cung cấp với dữ liệu được cung cấp hoặc có sẵn.
+		\\ \hline
+	\end{tabular}
+	\caption{Yêu cầu chức năng}
+	% \label{fig:my_label}
+\end{table}
+\subsection{Yêu cầu phi chức năng}
+\begin{itemize}
+	\item Hệ thống chạy đúng, ổn định
+	\item Giao diện thân thiện, dễ sử dụng
+	\item Bảo mật thông tin cá nhân người dùng
+\end{itemize}
+\section{Mô hình usecase}
+\subsection{Xác định các tác nhân và usecase}
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{p{5cm}p{10cm}}
+		\hline
+		\textbf{Actor}         & \textbf{Ý nghĩa}                                                                                                                           \\ \hline
+		Người quản trị         & Quản trị bao gồm các thao tác: thêm, xóa, sửa, lấy thông tin tài khoản, hồ sơ mất tích các tác nhân. Thống kê chi tiết các hồ sơ mất tích. \\ \hline
+		Cảnh sát               & Tiếp nhận và quản lý các cảnh báo và thực hiện can thiệp khi phát hiện mất tích.
+		Theo dõi, kiểm tra.
+		thấy                                                                                                                                                                \\ \hline
+		Người báo cáo mất tích & Cung cấp thông tin, hình ảnh người mất tích cho hệ thống. Nhận thông báo và cập nhật khi có phát hiện mới từ hệ thống.
+		\\ \hline
+		Người tìm kiếm         & Thực hiện việc tìm kiếm, báo cáo khi có phát hiện.
+		Ghi nhận, lưu trữ các thông tin.
+		\\ \hline
+	\end{tabular}
+	\caption{Xác định Actor}
+	\label{fig:my_label}
+\end{table}
+\subsection{Xây dựng biểu đồ usecase tổng quát}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Hinhve/usecase_tong_quat.png}
+	\caption{Biểu đồ usecase tổng quát}
+	% \label{fig:usecase}
+\end{figure}
+\subsubsection{Xây dựng biểu đồ usecase tổng quát cho người quản lý}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Hinhve/usecase_quan_ly.png}
+	\caption{Biểu đồ usecase cho người quản lý}
+	% \label{fig:usecase}
+\end{figure}
+\subsubsection{Xây dựng biểu đồ usecase tổng quát cho cảnh sát}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Hinhve/usecase_canh_sat.png}
+	\caption{Biểu đồ usecase cho cảnh sát}
+	% \label{fig:usecase}
+\end{figure}
+\subsubsection{Xây dựng biểu đồ usecase tổng quát cho người báo cáo mất tích}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Hinhve/usecase_nguoi_bao_cao.png}
+	\caption{Biểu đồ usecase cho người báo cáo mất tích}
+	% \label{fig:usecase}
+\end{figure}
+\subsubsection{Xây dựng biểu đồ usecase tổng quát cho người tìm kiếm}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Hinhve/usecase_nguoi_tim_kiem.png}
+	\caption{Biểu đồ usecase cho người tìm kiếm}
+	\label{fig:usecase}
+\end{figure}
+\subsection{Đặc tả chi tiết các usecase}
+\subsubsection{Đăng nhập}
+\begin{itemize}
+	\item \textbf{Mô tả} : Cho phép người dùng đã có tài khoản truy cập vào hệ thống bằng thông tin xác thực của mình.
+	\item \textbf{Actor}: Người dùng đã đăng ký (Người báo cáo, Quản trị viên).
+	\item \textbf{Đặc tả}
+	      \begin{itemize}
+		      \item \textbf{Tiền điều kiện}
+		            \begin{enumerate}
+			            \item Người dùng đã có một tài khoản hợp lệ.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện chính}
+		            \begin{enumerate}
+			            \item Người dùng truy cập trang đăng nhập.
+			            \item Người dùng nhập Email và Mật khẩu.
+			            \item Người dùng nhấn nút "Đăng nhập".
+			            \item Hệ thống kiểm tra và xác thực thông tin đăng nhập với cơ sở dữ liệu.
+			            \item Nếu thông tin chính xác, hệ thống cấp quyền truy cập và chuyển hướng người dùng tới giao diện chính tương ứng với vai trò của họ.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện thay thế}
+		            \begin{enumerate}
+			            \item Nếu email hoặc mật khẩu không chính xác, hệ thống hiển thị thông báo: "Thông tin đăng nhập không đúng. Vui lòng thử lại."
+			            \item Nếu tài khoản đã bị khóa, hệ thống hiển thị thông báo: "Tài khoản của bạn đã bị khóa."
+		            \end{enumerate}
+		      \item \textbf{Hậu điều kiện}
+		            \begin{enumerate}
+			            \item Người dùng được đăng nhập thành công và có một phiên làm việc mới.
+		            \end{enumerate}
+	      \end{itemize}
+\end{itemize}
+\subsubsection{Đăng kí}
+\begin{itemize}
+	\item \textbf{Mô tả} : Chức năng này cho phép người dùng mới tạo một tài khoản để có thể sử dụng các tính năng của hệ thống như báo cáo, cung cấp thông tin.
+	\item \textbf{Actor}: Người dùng mới (Người báo cáo, Người tìm kiếm).
+	\item \textbf{Đặc tả}
+	      \begin{itemize}
+		      \item \textbf{Tiền điều kiện}
+		            \begin{enumerate}
+			            \item Người dùng chưa có tài khoản trên hệ thống.
+			            \item Người dùng đang ở trang đăng ký.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện chính}
+		            \begin{enumerate}
+			            \item Người dùng nhấn vào nút hoặc liên kết "Đăng ký".
+			            \item Hệ thống hiển thị một biểu mẫu (form) yêu cầu các thông tin bắt buộc như: Họ tên, Email, Số điện thoại, Mật khẩu và Xác nhận mật khẩu
+			            \item Người dùng điền đầy đủ và chính xác các thông tin vào biểu mẫu.
+			            \item Người dùng nhấn nút "Hoàn tất đăng ký".
+			            \item Hệ thống kiểm tra tính hợp lệ của dữ liệu (email đúng định dạng, mật khẩu trùng khớp, email chưa tồn tại).
+			            \item Hệ thống tạo tài khoản mới và lưu thông tin vào cơ sở dữ liệu.
+			            \item Hệ thống hiển thị thông báo "Đăng ký thành công" và chuyển hướng người dùng đến trang đăng nhập.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện thay thế}
+		            \begin{enumerate}
+			            \item Nếu email đã tồn tại, hệ thống báo lỗi: "Email này đã được sử dụng".
+			            \item Nếu mật khẩu và xác nhận mật khẩu không khớp, hệ thống báo lỗi: "Mật khẩu không khớp".
+			            \item Nếu người dùng bỏ trống các trường thông tin bắt buộc, hệ thống sẽ yêu cầu nhập đầy đủ.
+		            \end{enumerate}
+		      \item \textbf{Hậu điều kiện}
+		            \begin{enumerate}
+			            \item Một tài khoản người dùng mới được tạo thành công trong hệ thống.
+		            \end{enumerate}
+	      \end{itemize}
+\end{itemize}
+\subsubsection{Đăng xuất}
+\begin{itemize}
+	\item \textbf{Mô tả} : Cho phép người dùng đang đăng nhập kết thúc phiên làm việc một cách an toàn.
+	\item \textbf{Actor}: Người dùng đã đăng nhập.
+	\item \textbf{Đặc tả}
+	      \begin{itemize}
+		      \item \textbf{Tiền điều kiện}
+		            \begin{enumerate}
+			            \item Người dùng đang trong một phiên đăng nhập.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện chính}
+		            \begin{enumerate}
+			            \item Người dùng nhấn vào nút "Đăng xuất".
+			            \item Hệ thống xác nhận yêu cầu và kết thúc phiên làm việc của người dùng.
+			            \item Hệ thống chuyển hướng người dùng về trang chủ hoặc trang đăng nhập.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện thay thế}
+		            \begin{enumerate}
+			            \item Không có.
+		            \end{enumerate}
+		      \item \textbf{Hậu điều kiện}
+		            \begin{enumerate}
+			            \item Phiên làm việc của người dùng bị chấm dứt.
+		            \end{enumerate}
+	      \end{itemize}
+\end{itemize}
+
+\subsubsection{Báo cáo mất tích}
+\begin{itemize}
+	\item \textbf{Mô tả} : Cho phép người dùng tạo một hồ sơ báo cáo mới về một trường hợp mất tích.
+	\item \textbf{Actor}: Người báo cáo mất tích.
+	\item \textbf{Đặc tả}
+	      \begin{itemize}
+		      \item \textbf{Tiền điều kiện}
+		            \begin{enumerate}
+			            \item Người dùng đã đăng nhập vào hệ thống.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện chính}
+		            \begin{enumerate}
+			            \item Người dùng chọn chức năng "Báo cáo mất tích".
+			            \item Hệ thống hiển thị biểu mẫu để nhập thông tin về người mất tích, bao gồm: Họ tên, tuổi, đặc điểm nhận dạng, hoàn cảnh mất tích, địa điểm và thời gian nhìn thấy lần cuối, hình ảnh, thông tin liên hệ của người báo cáo.
+			            \item Người dùng điền đầy đủ thông tin và nhấn "Gửi báo cáo".
+			            \item Hệ thống kiểm tra dữ liệu và tạo một hồ sơ mới với trạng thái "Chờ xác thực".
+			            \item Hệ thống thông báo cho người dùng đã gửi báo cáo thành công và thông báo cho Cảnh sát/Quản trị viên về báo cáo mới.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện thay thế}
+		            \begin{enumerate}
+			            \item Nếu thiếu thông tin bắt buộc, hệ thống sẽ yêu cầu người dùng bổ sung.
+		            \end{enumerate}
+		      \item \textbf{Hậu điều kiện}
+		            \begin{enumerate}
+			            \item Một hồ sơ mất tích mới được tạo và chờ để được xác thực.
+		            \end{enumerate}
+	      \end{itemize}
+\end{itemize}
+
+\subsubsection{Nhận thông báo}
+\begin{itemize}
+	\item \textbf{Mô tả} : Hệ thống tự động gửi thông báo cho người dùng về các cập nhật quan trọng liên quan đến hoạt động của họ.
+	\item \textbf{Actor}: Mọi người dùng đã đăng nhập.
+	\item \textbf{Đặc tả}
+	      \begin{itemize}
+		      \item \textbf{Tiền điều kiện}
+		            \begin{enumerate}
+			            \item Người dùng đã đăng nhập.
+			            \item Có một sự kiện phát sinh (ví dụ: báo cáo được duyệt, có thông tin mới...).
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện chính}
+		            \begin{enumerate}
+			            \item Hệ thống tạo một thông báo tương ứng với sự kiện.
+			            \item Hệ thống hiển thị một chỉ báo (ví dụ: số trên biểu tượng chuông) trên giao diện của người dùng.
+			            \item Người dùng nhấp vào biểu tượng thông báo để xem danh sách các thông báo mới.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện thay thế}
+		            \begin{enumerate}
+			            \item Không có.
+		            \end{enumerate}
+		      \item \textbf{Hậu điều kiện}
+		            \begin{enumerate}
+			            \item Người dùng được cập nhật kịp thời về các thông tin liên quan.
+		            \end{enumerate}
+	      \end{itemize}
+\end{itemize}
+
+\subsubsection{Báo cáo phát hiện, Cung cấp thông tin}
+\begin{itemize}
+	\item \textbf{Mô tả} : Cho phép người dùng cung cấp thông tin bổ sung hoặc báo cáo đã nhìn thấy một người trong danh sách mất tích.
+	\item \textbf{Actor}: Mọi người dùng.
+	\item \textbf{Đặc tả}
+	      \begin{itemize}
+		      \item \textbf{Tiền điều kiện}
+		            \begin{enumerate}
+			            \item Người dùng đang xem chi tiết một hồ sơ mất tích.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện chính}
+		            \begin{enumerate}
+			            \item Người dùng chọn chức năng "Cung cấp thông tin" hoặc "Báo cáo phát hiện".
+			            \item Hệ thống hiển thị một biểu mẫu để người dùng nhập nội dung thông tin, thời gian, địa điểm, và đính kèm bằng chứng (nếu có).
+			            \item Người dùng nhấn nút "Gửi thông tin".
+			            \item Hệ thống lưu lại thông tin và liên kết với hồ sơ gốc, đồng thời gửi thông báo đến người tạo báo cáo và Cảnh sát/Quản trị viên.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện thay thế}
+		            \begin{enumerate}
+			            \item Không có.
+		            \end{enumerate}
+		      \item \textbf{Hậu điều kiện}
+		            \begin{enumerate}
+			            \item Thông tin mới được cập nhật vào hồ sơ và các bên liên quan nhận được thông báo.
+		            \end{enumerate}
+	      \end{itemize}
+\end{itemize}
+
+\subsubsection{Tiếp nhận thông tin mất tích, Xác thực báo cáo}
+\begin{itemize}
+	\item \textbf{Mô tả} : Cho phép Cảnh sát hoặc Quản trị viên xem xét, kiểm tra và thay đổi trạng thái của các báo cáo do người dùng gửi lên.
+	\item \textbf{Actor}: Cảnh sát, Quản trị viên.
+	\item \textbf{Đặc tả}
+	      \begin{itemize}
+		      \item \textbf{Tiền điều kiện}
+		            \begin{enumerate}
+			            \item Actor đã đăng nhập với quyền hạn phù hợp.
+			            \item Có ít nhất một báo cáo đang ở trạng thái "Chờ xác thực".
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện chính}
+		            \begin{enumerate}
+			            \item Actor truy cập vào khu vực quản lý báo cáo.
+			            \item Hệ thống hiển thị danh sách các báo cáo đang chờ.
+			            \item Actor chọn một báo cáo để xem chi tiết.
+			            \item Sau khi kiểm tra thông tin, actor chọn hành động "Duyệt" hoặc "Từ chối".
+			            \item Nếu chọn "Duyệt", hệ thống cập nhật trạng thái hồ sơ thành "Đã xác thực" và hiển thị công khai.
+			            \item Nếu chọn "Từ chối", hệ thống yêu cầu nhập lý do và cập nhật trạng thái hồ sơ thành "Bị từ chối".
+			            \item Hệ thống gửi thông báo kết quả cho người đã tạo báo cáo.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện thay thế}
+		            \begin{enumerate}
+			            \item Không có.
+		            \end{enumerate}
+		      \item \textbf{Hậu điều kiện}
+		            \begin{enumerate}
+			            \item Báo cáo được duyệt và công khai, hoặc bị từ chối và không hiển thị.
+		            \end{enumerate}
+	      \end{itemize}
+\end{itemize}
+
+\subsubsection{Tìm kiếm}
+\begin{itemize}
+	\item \textbf{Mô tả} : Cung cấp công cụ cho phép người dùng tìm kiếm các hồ sơ người mất tích đã được duyệt.
+	\item \textbf{Actor}: Mọi người dùng.
+	\item \textbf{Đặc tả}
+	      \begin{itemize}
+		      \item \textbf{Tiền điều kiện}
+		            \begin{enumerate}
+			            \item Người dùng đang truy cập hệ thống.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện chính}
+		            \begin{enumerate}
+			            \item Người dùng truy cập vào trang "Tìm kiếm".
+			            \item Hệ thống hiển thị các trường và bộ lọc tìm kiếm (ví dụ: tên, khu vực, độ tuổi, giới tính).
+			            \item Người dùng nhập tiêu chí tìm kiếm và nhấn nút "Tìm kiếm".
+			            \item Hệ thống truy vấn và trả về danh sách các hồ sơ mất tích phù hợp với tiêu chí.
+			            \item Người dùng có thể nhấp vào một hồ sơ để xem thông tin chi tiết.
+		            \end{enumerate}
+		      \item \textbf{Luồng sự kiện thay thế}
+		            \begin{enumerate}
+			            \item Nếu không có hồ sơ nào phù hợp, hệ thống sẽ hiển thị thông báo "Không tìm thấy kết quả".
+		            \end{enumerate}
+		      \item \textbf{Hậu điều kiện}
+		            \begin{enumerate}
+			            \item Người dùng xem được danh sách các hồ sơ mất tích theo yêu cầu.
+		            \end{enumerate}
+	      \end{itemize}
+\end{itemize}
+\section{Biều đồ tuần tự tương ứng với các usecase}
+\subsection{Biều đồ tuần tự ca báo cáo người mất tích}
+\begin{figure}[H]
+	\centering{}
+	\includegraphics[width=1\linewidth]{Hinhve/seq_bao_cao_nguoi_mat_tich.png}
+	\caption{Biều đồ tuần tự ca tìm kiếm người mất tích}
+	\label{fig:31}
+\end{figure}
+\subsection{Biều đồ tuần tự ca báo cáo người mất tích}
+\begin{figure}[H]
+	\centering{}
+	\includegraphics[width=1\linewidth]{Hinhve/seq_tim_kiem_nguoi_mat_tich.png}
+	\caption{Biều đồ tuần tự ca tìm kiếm người mất tích}
+	\label{fig:32}
+\end{figure}
+\section{Mô hình ERD}
+\begin{figure}[H]
+	\centering{}
+	\includegraphics[width=1\linewidth]{Hinhve/erd.png}
+	\caption{Mô hình ERD}
+	% \label{fig:32}
+\end{figure}
+\section{Mô hình cơ sở dữ liệu quan hệ}
+\textbf{Quy ước}
+\begin{itemize}
+	\item Primary key: Gạch chân
+	\item Foreign key: In đậm
+\end{itemize}
+\textbf{Danh sách các thực thể}
+\begin{itemize}
+	\item FOLLOWS(id, following\_user\_id, followed\_user\_id, created\_at)
+	\item USERS(id, username, role, created\_at)
+	\item POSTS(id, title, body, user\_id, created\_at, status)
+	\item ACCOUNT(id, username, password, email, full\_name, birthday, address, gender, phone, profile\_picture\_url, account\_type, account\_status, created\_at)
+	\item AREA(id, commune, district, province, country, latitude, longitude, description)
+	\item CARE\_PARTNER(id, partner\_type, partner\_name, organization\_name)
+	\item MANAGE\_DOCUMENT(id\_police, id\_missing\_document, description, found\_time, found\_person\_picture, confirm\_time, update\_time, find\_place, confirmation\_method, id\_found\_volunteer)
+	\item DETAIL\_AREA\_ACCOUNT(id\_area, id\_account)
+	\item VOLUNTEER(id, volunteer\_status, date\_joined, skills, rating)
+	\item CCTV(id, name, stream\_url, ip, port, latitude, longitude, camera\_type, last\_online, id\_area)
+	\item MISSING\_DOCUMENT(id, full\_name, birthday, gender, identity\_card\_number, height, weight, identifying\_characteristic, last\_known\_outfit, medical\_conditions, last\_sighting\_url, missing\_time, report\_date, update\_date, case\_status, reporter\_relationship, id\_missing\_area, id\_reporter)
+	\item VOLUNTEER\_REPORT(id, id\_missing\_document, id\_volunteer, report\_time, sighting\_picture, sighting\_area\_id, latitude, longitude, description, report\_status)
+	\item VOLUNTEER\_SUBSCRIPTION(id\_missing\_document, id\_volunteer, subscribed\_date, is\_active)
+	\item CCTV\_REPORT(id, id\_cctv, id\_missing\_document, detail, time\_report, confirmation\_status, confident, detection\_log, detect\_picture, id\_police\_reviewer, review\_time, review\_notes)
+	\item POLICE(id, id\_area, station, patrol\_car\_number)
+\end{itemize}
+\textbf{Mô tả các bảng thực thế}
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Khóa} & \textbf{Notnull}
+		\\ \hline
+		1            & id                  & INT IDENTITY(1,1)     & Khóa chính    & X
+		\\ \hline
+		2            & commune             & NVARCHAR(100)         &               & X
+		\\ \hline
+		3            & district            & NVARCHAR(100)         &               & X
+		\\ \hline
+		4            & province            & NVARCHAR(100)         &               & X
+		\\ \hline
+		5            & country             & NVARCHAR(100)         &               & X
+		\\ \hline
+		6            & latitude            & DECIMAL(9, 6)         &               &
+		\\ \hline
+		7            & longitude           & DECIMAL(9, 6)         &               &
+		\\ \hline
+		8            & description         & NVARCHAR(500)         &               &
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể AREA}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Khóa}          & \textbf{Notnull}
+		\\ \hline
+		1            & id\_area            & INT                   & Khóa chính, Khóa ngoại & X
+		\\ \hline
+		2            & id\_account         & INT                   & Khóa chính, Khóa ngoại & X
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể DETAIL\_AREA\_ACCOUNT}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Khóa}          & \textbf{Notnull}
+		\\ \hline
+		1            & id                  & INT                   & Khóa chính, Khóa ngoại & X
+		\\ \hline
+		2            & volunteer\_status   & BIT                   &                        & X
+		\\ \hline
+		3            & date\_joined        & DATE                  &                        &
+		\\ \hline
+		4            & skills              & NVARCHAR(MAX)         &                        &
+		\\ \hline
+		5            & rating              & FLOAT                 &                        &
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể VOLUNTEER}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Khóa} & \textbf{Notnull}
+		\\ \hline
+		1            & following\_user\_id & integer               & Khóa ngoại    &
+		\\ \hline
+		2            & followed\_user\_id  & integer               & Khóa ngoại    &
+		\\ \hline
+		3            & created\_at         & timestamp             &               &
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể FOLLOWS}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Khóa} & \textbf{Notnull}
+		\\ \hline
+		1            & id                  & integer               & Khóa chính    &
+		\\ \hline
+		2            & username            & varchar               &               &
+		\\ \hline
+		3            & role                & varchar               &               &
+		\\ \hline
+		4            & created\_at         & timestamp             &               &
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể USERS}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Khóa} & \textbf{Notnull}
+		\\ \hline
+		1            & id                  & INT                   & Khóa chính    & X
+		\\ \hline
+		2            & partner\_type       & BIT                   &               & X
+		\\ \hline
+		3            & partner\_name       & NVARCHAR(100)         &               &
+		\\ \hline
+		4            & organization\_name  & NVARCHAR(255)         &               &
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể CARE\_PARTNER}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính}    & \textbf{Kiểu dữ liệu} & \textbf{Khóa}          & \textbf{Notnull}
+		\\ \hline
+		1            & id\_police             & INT                   & Khóa chính, Khóa ngoại & X
+		\\ \hline
+		2            & id\_missing\_document  & INT                   & Khóa chính, Khóa ngoại & X
+		\\ \hline
+		3            & description            & NVARCHAR(MAX)         &                        &
+		\\ \hline
+		4            & found\_date            & DATETIME              &                        &
+		\\ \hline
+		5            & found\_person\_picture & NVARCHAR(255)         &                        &
+		\\ \hline
+		6            & confirm\_time          & DATETIME              &                        &
+		\\ \hline
+		7            & update\_time           & DATETIME              &                        &
+		\\ \hline
+		8            & find\_place            & NVARCHAR(MAX)         &                        &
+		\\ \hline
+		9            & confirmation\_method   & NVARCHAR(255)         &                        &
+		\\ \hline
+		10           & id\_found\_volunteer   & INT                   & Khóa ngoại             &
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể MANAGE\_DOCUMENT}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính}   & \textbf{Kiểu dữ liệu} & \textbf{Khóa} & \textbf{Notnull}
+		\\ \hline
+		1            & id                    & INT IDENTITY(1,1)     & Khóa chính    & X
+		\\ \hline
+		2            & id\_missing\_document & INT                   & Khóa ngoại    & X
+		\\ \hline
+		3            & id\_volunteer         & INT                   & Khóa ngoại    & X
+		\\ \hline
+		4            & report\_time          & DATETIME              &               & X
+		\\ \hline
+		5            & sighting\_picture     & NVARCHAR(MAX)         &               &
+		\\ \hline
+		6            & sighting\_area\_id    & INT                   & Khóa ngoại    &
+		\\ \hline
+		7            & latitude              & DECIMAL(9, 6)         &               &
+		\\ \hline
+		8            & longitude             & DECIMAL(9, 6)         &               &
+		\\ \hline
+		9            & description           & NVARCHAR(MAX)         &               &
+		\\ \hline
+		10           & report\_status        & NVARCHAR(50)          &               & X
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể VOLUNTEER\_REPORT}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Khóa} & \textbf{Notnull}
+		\\ \hline
+		1            & id                  & integer               & Khóa chính    &
+		\\ \hline
+		2            & title               & text                  &               &
+		\\ \hline
+		3            & body                & text                  &               &
+		\\ \hline
+		4            & user\_id            & integer               & Khóa ngoại    &
+		\\ \hline
+		5            & status              & varchar               &               &
+		\\ \hline
+		6            & created\_at         & timestamp             &               &
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể POSTS}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Khóa} & \textbf{Notnull}
+		\\ \hline
+		1            & id                  & INT IDENTITY(1,1)     & Khóa chính    & X
+		\\ \hline
+		2            & name                & NVARCHAR(255)         &               & X
+		\\ \hline
+		3            & status              & NVARCHAR(50)          &               &
+		\\ \hline
+		4            & stream\_url         & NVARCHAR(MAX)         &               & X
+		\\ \hline
+		5            & ip                  & NVARCHAR(50)          &               &
+		\\ \hline
+		6            & port                & INT                   &               &
+		\\ \hline
+		7            & latitude            & DECIMAL(9, 6)         &               &
+		\\ \hline
+		8            & longitude           & DECIMAL(9, 6)         &               &
+		\\ \hline
+		9            & camera\_type        & NVARCHAR(100)         &               &
+		\\ \hline
+		10           & last\_online        & DATETIME              &               &
+		\\ \hline
+		11           & id\_area            & INT                   & Khóa ngoại    &
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể CCTV}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính}         & \textbf{Kiểu dữ liệu} & \textbf{Khóa} & \textbf{Notnull}
+		\\ \hline
+		1            & id                          & INT IDENTITY(1,1)     & Khóa chính    & X
+		\\ \hline
+		2            & full\_name                  & NVARCHAR(255)         &               & X
+		\\ \hline
+		3            & birthday                    & DATE                  &               &
+		\\ \hline
+		4            & gender                      & BIT                   &               &
+		\\ \hline
+		5            & identity\_card\_number      & NVARCHAR(100)         &               &
+		\\ \hline
+		6            & height                      & NVARCHAR(20)          &               &
+		\\ \hline
+		7            & weight                      & NVARCHAR(20)          &               &
+		\\ \hline
+		8            & identifying\_characteristic & NVARCHAR(MAX)         &               &
+		\\ \hline
+		9            & last\_known\_outfit         & NVARCHAR(MAX)         &               &
+		\\ \hline
+		10           & medical\_conditions         & NVARCHAR(MAX)         &               &
+		\\ \hline
+		11           & description\_detail         & NVARCHAR(MAX)         &               & X
+		\\ \hline
+		12           & missing\_time               & DATETIME              &               & X
+		\\ \hline
+		13           & report\_date                & DATETIME              &               & X
+		\\ \hline
+		14           & update\_date                & DATETIME              &               & X
+		\\ \hline
+		15           & case\_status                & NVARCHAR(50)          &               & X
+		\\ \hline
+		16           & reporter\_relationship      & NVARCHAR(100)         &               &
+		\\ \hline
+		17           & id\_missing\_area           & INT                   & Khóa ngoại    &
+		\\ \hline
+		18           & id\_reporter                & INT                   & Khóa ngoại    &
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể MISSING\_DOCUMENT}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính}   & \textbf{Kiểu dữ liệu} & \textbf{Khóa}          & \textbf{Notnull}
+		\\ \hline
+		1            & id\_missing\_document & INT                   & Khóa chính, Khóa ngoại & X
+		\\ \hline
+		2            & id\_volunteer         & INT                   & Khóa chính, Khóa ngoại & X
+		\\ \hline
+		3            & subscribed\_date      & DATETIME              &                        & X
+		\\ \hline
+		4            & is\_active            & BIT                   &                        & X
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể VOLUNTEER\_SUBSCRIPTION}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính}   & \textbf{Kiểu dữ liệu} & \textbf{Khóa} & \textbf{Notnull}
+		\\ \hline
+		1            & id                    & INT IDENTITY(1,1)     & Khóa chính    & X
+		\\ \hline
+		2            & username              & NVARCHAR(255)         &               & X
+		\\ \hline
+		3            & password              & VARCHAR(MAX)          &               & X
+		\\ \hline
+		4            & email                 & NVARCHAR(255)         &               & X
+		\\ \hline
+		5            & full\_name            & NVARCHAR(255)         &               &
+		\\ \hline
+		6            & birthday              & DATE                  &               &
+		\\ \hline
+		7            & address               & NVARCHAR(MAX)         &               &
+		\\ \hline
+		8            & gender                & BIT                   &               &
+		\\ \hline
+		9            & phone                 & VARCHAR(20)           &               &
+		\\ \hline
+		10           & profile\_picture\_url & VARCHAR(MAX)          &               &
+		\\ \hline
+		11           & account\_type         & NVARCHAR(50)          &               & X
+		\\ \hline
+		12           & account\_status       & BIT                   &               & X
+		\\ \hline
+		13           & created\_at           & DATETIME              &               & X
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể ACCOUNT}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính}   & \textbf{Kiểu dữ liệu} & \textbf{Khóa} & \textbf{Notnull}
+		\\ \hline
+		1            & id                    & INT IDENTITY(1,1)     & Khóa chính    & X
+		\\ \hline
+		2            & id\_cctv              & INT                   & Khóa ngoại    &
+		\\ \hline
+		3            & id\_missing\_document & INT                   & Khóa ngoại    &
+		\\ \hline
+		4            & detail                & NVARCHAR(MAX)         &               &
+		\\ \hline
+		5            & time\_report          & DATETIME              &               & X
+		\\ \hline
+		6            & confirmation\_status  & NVARCHAR(50)          &               & NN
+		\\ \hline
+		7            & confident             & FLOAT                 &               &
+		\\ \hline
+		8            & detection\_log        & NVARCHAR(255)         &               &
+		\\ \hline
+		9            & detect\_picture       & NVARCHAR(255)         &               &
+		\\ \hline
+		10           & id\_police\_reviewer  & INT                   & Khóa ngoại    &
+		\\ \hline
+		11           & review\_time          & DATETIME              &               &
+		\\ \hline
+		12           & review\_notes         & NVARCHAR(MAX)         &               &
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể CCTV\_REPORT}
+\end{table}
+
+\begin{table}[H]
+	\centering{}
+	\begin{tabular}{m{1cm} m{4cm} m{3.5cm} m{3cm} m{1.5cm}}
+		\hline
+		\textbf{STT} & \textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Khóa}          & \textbf{Notnull}
+		\\ \hline
+		1            & id                  & INT                   & Khóa chính, Khóa ngoại & X
+		\\ \hline
+		2            & police\_code        & NVARCHAR(100)         &                        &
+		\\ \hline
+		3            & station             & NVARCHAR(255)         &                        &
+		\\ \hline
+		4            & rank                & NVARCHAR(100)         &                        &
+		\\ \hline
+		5            & patrol\_car\_number & NVARCHAR(100)         &                        &
+		\\ \hline
+	\end{tabular}
+	\caption{Bảng thực thể POLICE}
+\end{table}
+\section{Mô hình dữ liệu}
+\subsection{Xét Users – Posts}
+Mỗi Users có 0 hoặc nhiều Posts. Mỗi Posts thuộc về 1 và chỉ 1 Users
+\begin{figure}[H]
+	\centering{}
+	\includegraphics[width=0.8\linewidth]{Hinhve/users_posts.png}
+	\caption{Quan hệ giữa Users và Posts}
+	% \label{fig:31}
+\end{figure}
+\subsection{Xét MISSING\_DOCUMENT – VOLUNTEER\_REPORT}
+Mỗi MISSING\_DOCUMENT có 0 hoặc nhiều VOLUNTEER\_REPORT. Mỗi VOLUNTEER\_REPORT liên quan đến 1 và chỉ 1 MISSING\_DOCUMENT
+\begin{figure}[H]
+	\centering{}
+	\includegraphics[width=0.8\linewidth]{Hinhve/missing_document_volunteer_post.png}
+	\caption{Quan hệ giữa Mising Document và Volunteer Report}
+	% \label{fig:31}
+\end{figure}
+\subsection{Xét VOLUNTEER – VOLUNTEER\_REPORT}
+Mỗi VOLUNTEER tạo 0 hoặc nhiều VOLUNTEER\_REPORT. Mỗi VOLUNTEER\_REPORT được tạo bởi 1 và chỉ 1 VOLUNTEER
+\begin{figure}[H]
+	\centering{}
+	\includegraphics[width=0.8\linewidth]{Hinhve/volunteer_volunteer_repost.png}
+	\caption{Quan hệ giữa Volunteer và Volunteer Report}
+	% \label{fig:31}
+\end{figure}
+\subsection{Xét AREA – DETAIL\_AREA\_ACCOUNT}
+Mỗi AREA có 0 hoặc nhiều DETAIL\_AREA\_ACCOUNT. Mỗi DETAIL\_AREA\_ACCOUNT thuộc về 1 và chỉ 1 AREA
+\begin{figure}[H]
+	\centering{}
+	\includegraphics[width=0.8\linewidth]{Hinhve/area_detail_area_account.png}
+	\caption{Quan hệ giữa Area và Detail Area Account}
+	% \label{fig:31}
+\end{figure}
+
+\subsection{Xét VOLUNTEER – VOLUNTEER\_SUBSCRIPTION}
+Mỗi VOLUNTEER có 0 hoặc nhiều VOLUNTEER\_SUBSCRIPTION. Mỗi VOLUNTEER\_SUBSCRIPTION thuộc về 1 và chỉ 1 VOLUNTEER
+\begin{figure}[H]
+	\centering{}
+	\includegraphics[width=0.8\linewidth]{Hinhve/volunteer_volunteer_subscription.png}
+	\caption{Quan hệ giữa Volunteer và Volunteer Subscription}
+	% \label{fig:31}
+\end{figure}
+\subsection{Xét MISSING\_DOCUMENT – VOLUNTEER\_SUBSCRIPTION}
+Mỗi MISSING\_DOCUMENT có 0 hoặc nhiều VOLUNTEER\_SUBSCRIPTION. Mỗi VOLUNTEER\_SUBSCRIPTION liên quan đến 1 và chỉ 1 MISSING\_DOCUMENT
+\begin{figure}[H]
+	\centering{}
+	\includegraphics[width=0.8\linewidth]{Hinhve/missing_document_volunteer_subsription.png}
+	\caption{Quan hệ giữa Missing Document và Volunteer Subscription}
+	% \label{fig:31}
+\end{figure}
+\section{Hoàn thiện mô hình}
+\begin{figure}[H]
+	\centering{}
+	\includegraphics[width=0.8\linewidth]{Hinhve/diagram.png}
+	\caption{Mô hình diagrams}
+	% \label{fig:31}
+\end{figure}
+\end{document}

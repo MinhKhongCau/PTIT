@@ -1,0 +1,38 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Sơ đồ tổng quan về trí tuệ nhân tạo}}{4}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Mô tả một neuron sinh học và một neuron nhân tạo}}{5}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Công thức và đồ thị hàm Sigmoid}}{7}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Đồ thị hàm Tanh}}{7}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Đồ thị hàm ReLU}}{8}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Minh hoạ kết quả sau khi đi qua hàm Softmax}}{9}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Giới thiệu về CosFace}}{11}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Giới thiệu về ChromaDB}}{15}{figure.caption.12}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Sơ đồ cơ cấu}}{16}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Biểu đồ usecase tổng quát}}{19}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Biểu đồ usecase cho người quản lý}}{20}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Biểu đồ usecase cho cảnh sát}}{20}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Biểu đồ usecase cho người báo cáo mất tích}}{21}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Biểu đồ usecase cho người tìm kiếm}}{21}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Biều đồ tuần tự ca tìm kiếm người mất tích}}{27}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Biều đồ tuần tự ca tìm kiếm người mất tích}}{28}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Mô hình ERD}}{28}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Quan hệ giữa Users và Posts}}{35}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Quan hệ giữa Mising Document và Volunteer Report}}{35}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Quan hệ giữa Volunteer và Volunteer Report}}{35}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Quan hệ giữa Area và Detail Area Account}}{35}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Quan hệ giữa Volunteer và Volunteer Subscription}}{36}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Quan hệ giữa Missing Document và Volunteer Subscription}}{36}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Mô hình diagrams}}{37}{figure.caption.45}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Giao diện trang chủ}}{38}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Giao diện đăng nhập}}{38}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Giao diện đăng kí}}{39}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Giao diện đăng thông tin người mất tích}}{39}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Giao diện quản lý tài khoản của cảnh sát}}{40}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Giao diện hiển thị ca mất tích trên bản đồ}}{40}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Giao diện hiển thị ca mất tích trên bản đồ}}{41}{figure.caption.52}%
+\addvspace {10\p@ }
+\contentsfinish 
+\contentsfinish 

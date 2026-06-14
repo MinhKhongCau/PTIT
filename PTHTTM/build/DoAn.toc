@@ -1,0 +1,99 @@
+\ttl@change@i {\@ne }{chapter}{0.0cm}{\bfseries \vspace {0.3cm}}{{\bfseries {\scshape } CHƯƠNG \thecontentslabel .\ }}{}{\titlerule *[0.3pc]{.}\contentspage }\relax 
+\ttl@change@v {chapter}{}{}{}\relax 
+\ttl@change@i {\@ne }{section}{0.0cm}{\vspace {0.3cm}}{\thecontentslabel \ }{}{\titlerule *[0.3pc]{.}\contentspage }\relax 
+\ttl@change@v {section}{}{}{}\relax 
+\ttl@change@i {\@ne }{subsection}{1.0cm}{\vspace {0.3cm}}{\thecontentslabel \ }{}{\titlerule *[0.3pc]{.}\contentspage }\relax 
+\ttl@change@v {subsection}{}{}{}\relax 
+\thispagestyle {empty}
+\contentsline {chapter}{\numberline {1}GIỚI THIỆU ĐỀ TÀI}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Tìm hiểu \textit {Phát triển hệ thống phát hiện người mất tích dựa trên dữ liệu ảnh chụp}}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Hiện trạng thực tế}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Giải pháp đề xuất}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Cấu trúc báo cáo}{3}{section.1.4}%
+\contentsline {chapter}{\numberline {2}CƠ SỞ LÝ THUYẾT VÀ CÔNG NGHỆ SỬ DỤNG}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Cơ sở lý thuyết}{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Trí tuệ nhân tạo}{4}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Học sâu}{4}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Mạng neuron nhân tạo và Mạng neuron tích chập}{5}{subsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {a}Tổng quan mạng neuron nhân tạo}{5}{subsubsection.2.1.3.1}%
+\contentsline {subsubsection}{\numberline {b}Cấu trúc của một mạng neuron nhân tạo đơn giản}{5}{subsubsection.2.1.3.2}%
+\contentsline {subsubsection}{\numberline {c}Lan truyền thằng}{6}{subsubsection.2.1.3.3}%
+\contentsline {subsubsection}{\numberline {d}Lan truyền ngược và đạo hàm}{6}{subsubsection.2.1.3.4}%
+\contentsline {subsubsection}{\numberline {e}Hàm kích hoạt}{6}{subsubsection.2.1.3.5}%
+\contentsline {subsection}{\numberline {2.1.4}Face Embedding}{10}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Similarity Search}{10}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Learning similarity}{10}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}CosFace}{10}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.8}Siamese Network}{11}{subsection.2.1.8}%
+\contentsline {section}{\numberline {2.2}Bộ dữ liệu huấn luyện}{12}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Pins Face Recognition}{12}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}LFW (Labeled Faces in the Wild)}{12}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Công nghệ sử dụng}{12}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Express}{12}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Node.js}{13}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Open CV}{13}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}React}{13}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Python}{14}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}TensorFlow}{14}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.7}Microsoft SQL Server}{14}{subsection.2.3.7}%
+\contentsline {subsection}{\numberline {2.3.8}Amazon Web Services}{14}{subsection.2.3.8}%
+\contentsline {subsection}{\numberline {2.3.9}ChromaDB}{15}{subsection.2.3.9}%
+\contentsline {chapter}{\numberline {3}PHÂN TÍCH THUYẾT KẾ HỆ THỐNG}{16}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Mô hình nghiệp vụ của hệ thống}{16}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Sơ đồ cơ cấu}{16}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Chức năng từng bộ phận}{16}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Quy trình nghiệp vụ}{16}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Tạo, Xác Minh và Quản Lý Hồ Sơ Người Mất Tích}{16}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Thông báo kết quả}{17}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Thêm người tìm kiếm vào hệ thống}{17}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Người tìm kiếm báo cáo kết quả}{17}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Hệ thống báo cáo kết quả}{18}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Yêu cầu chức năng}{18}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Yêu cầu phi chức năng}{18}{subsection.3.2.7}%
+\contentsline {section}{\numberline {3.3}Mô hình usecase}{19}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Xác định các tác nhân và usecase}{19}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Xây dựng biểu đồ usecase tổng quát}{19}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {a}Xây dựng biểu đồ usecase tổng quát cho người quản lý}{20}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {b}Xây dựng biểu đồ usecase tổng quát cho cảnh sát}{20}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {c}Xây dựng biểu đồ usecase tổng quát cho người báo cáo mất tích}{21}{subsubsection.3.3.2.3}%
+\contentsline {subsubsection}{\numberline {d}Xây dựng biểu đồ usecase tổng quát cho người tìm kiếm}{21}{subsubsection.3.3.2.4}%
+\contentsline {subsection}{\numberline {3.3.3}Đặc tả chi tiết các usecase}{21}{subsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {a}Đăng nhập}{21}{subsubsection.3.3.3.1}%
+\contentsline {subsubsection}{\numberline {b}Đăng kí}{22}{subsubsection.3.3.3.2}%
+\contentsline {subsubsection}{\numberline {c}Đăng xuất}{23}{subsubsection.3.3.3.3}%
+\contentsline {subsubsection}{\numberline {d}Báo cáo mất tích}{24}{subsubsection.3.3.3.4}%
+\contentsline {subsubsection}{\numberline {e}Nhận thông báo}{24}{subsubsection.3.3.3.5}%
+\contentsline {subsubsection}{\numberline {f}Báo cáo phát hiện, Cung cấp thông tin}{25}{subsubsection.3.3.3.6}%
+\contentsline {subsubsection}{\numberline {g}Tiếp nhận thông tin mất tích, Xác thực báo cáo}{26}{subsubsection.3.3.3.7}%
+\contentsline {subsubsection}{\numberline {h}Tìm kiếm}{26}{subsubsection.3.3.3.8}%
+\contentsline {section}{\numberline {3.4}Biều đồ tuần tự tương ứng với các usecase}{27}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Biều đồ tuần tự ca báo cáo người mất tích}{27}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Biều đồ tuần tự ca báo cáo người mất tích}{28}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Mô hình ERD}{28}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Mô hình cơ sở dữ liệu quan hệ}{28}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Mô hình dữ liệu}{35}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Xét Users – Posts}{35}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Xét MISSING\_DOCUMENT – VOLUNTEER\_REPORT}{35}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Xét VOLUNTEER – VOLUNTEER\_REPORT}{35}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Xét AREA – DETAIL\_AREA\_ACCOUNT}{35}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.5}Xét VOLUNTEER – VOLUNTEER\_SUBSCRIPTION}{36}{subsection.3.7.5}%
+\contentsline {subsection}{\numberline {3.7.6}Xét MISSING\_DOCUMENT – VOLUNTEER\_SUBSCRIPTION}{36}{subsection.3.7.6}%
+\contentsline {section}{\numberline {3.8}Hoàn thiện mô hình}{37}{section.3.8}%
+\contentsline {chapter}{\numberline {4}XÂY DỰNG HỆ THỐNG}{38}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Yêu cầu hệ thống}{38}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Demo giao diện}{38}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Giao diện Trang chủ}{38}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Giao diện Đăng nhập}{38}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Giao diện Đăng kí}{39}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Giao diện Đăng thông tin mất tích}{39}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Giao diện Quản lý tài khoản}{39}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Giao diện Hiển thị ca mất tích trên bản đồ}{40}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}Giao diện Hiển thị chức năng của người dùng}{40}{subsection.4.2.7}%
+\contentsline {section}{\numberline {4.3}Source code}{41}{section.4.3}%
+\contentsline {chapter}{\numberline {5}TỔNG KẾT VÀ HƯỚNG PHÁT TRIỂN}{42}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Tổng kết}{42}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Kết quả đạt được}{42}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Hạn chế}{42}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Hướng phát triển}{42}{section.5.2}%
+\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{44}{section*.54}%
+\contentsfinish 

@@ -1,0 +1,26 @@
+\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+\section{Kết luận}
+Đề tài đã hoàn thành các mục tiêu nghiên cứu đề ra, đóng góp một cái nhìn toàn diện và một giải pháp kiến trúc chi tiết cho bài toán phức tạp về lưu trữ và chia sẻ Hồ sơ sức khỏe điện tử (EHR) cá nhân.
+\begin{itemize}
+    \item Về mặt lý thuyết, báo cáo đã tổng hợp và phân tích sâu sắc các công nghệ nền tảng (openEHR, Hyperledger Fabric), các khung pháp lý liên quan (HIPAA, PDPL) và các công trình nghiên cứu đi trước. Qua đó, báo cáo đã xác định được khoảng trống nghiên cứu quan trọng là sự thiếu vắng một mô hình toàn diện, lấy người dùng làm trung tâm và có khả năng quản lý linh hoạt việc chia sẻ dữ liệu cho cả các thực thể y tế truyền thống (CE) và các thực thể phi y tế (NCE).
+    \item Về mặt thực tiễn, báo cáo đã đề xuất một mô hình kiến trúc khả thi và đột phá. Bằng cách kết hợp tính chuẩn hóa của EHRbase và tính minh bạch, bất biến của Hyperledger Fabric, mô hình không chỉ giải quyết các vấn đề về tương tác và bảo mật mà còn đặt nền móng cho một hệ sinh thái dữ liệu sức khỏe mới. Điểm nổi bật của mô hình là cơ chế quản lý sự đồng ý chi tiết và các luồng hoạt động được thiết kế riêng biệt cho CE và NCE, giúp cân bằng giữa nhu cầu chia sẻ dữ liệu và yêu cầu bảo vệ quyền riêng tư.
+    \item Về tính mới, đề tài là một trong những nghiên cứu đầu tiên tại Việt Nam đề xuất một kiến trúc kết hợp chặt chẽ giữa tiêu chuẩn openEHR và Hyperledger Fabric, đồng thời phân tích và thiết kế để tuân thủ các yêu cầu cụ thể của Nghị định 13/2023/NĐ-CP.
+\end{itemize}
+Tóm lại, mô hình được đề xuất không chỉ là một giải pháp kỹ thuật mà còn là một bước tiến hướng tới việc dân chủ hóa dữ liệu sức khỏe, trả lại quyền kiểm soát thông tin cho chính người dân. Dù vẫn còn nhiều thách thức trong việc triển khai, mô hình này đã vạch ra một lộ trình rõ ràng và đầy hứa hẹn cho tương lai của y tế số tại Việt Nam và trên thế giới.
+\section{Hạn chế của đề tài}
+Mặc dù đã nỗ lực, đề tài vẫn còn một số hạn chế nhất định:
+\begin{itemize}
+    \item Đề tài chỉ dừng lại ở mức độ đề xuất và thiết kế kiến trúc lý thuyết, chưa có điều kiện triển khai thử nghiệm (Proof of Concept) để đánh giá hiệu suất, tính bảo mật và trải nghiệm người dùng trong môi trường thực tế.
+    \item Các vấn đề phức tạp như quản lý khóa cho người dùng cuối, chi phí vận hành mạng blockchain và các mô hình kinh doanh bền vững cho hệ thống chưa được phân tích sâu.
+    \item Việc tích hợp với Trí tuệ Nhân tạo mới chỉ được đề cập ở mức định hướng, chưa có thiết kế chi tiết.
+\end{itemize}
+\section{Hướng phát triển}
+Để tiếp tục phát triển và hiện thực hóa mô hình này, nhóm chúng em xin đề xuất các hướng nghiên cứu và phát triển trong tương lai:
+\begin{itemize}
+    \item Xây dựng một phiên bản thử nghiệm (PoC - Proof of Concept): Triển khai một phiên bản thu nhỏ của hệ thống với các chức năng cốt lõi để kiểm tra các giả định thiết kế, đo lường hiệu suất và thu thập phản hồi từ người dùng.
+    \item Khám phá các cơ chế đồng thuận hiệu quả hơn: Nghiên cứu và so sánh các cơ chế đồng thuận mới của Hyperledger Fabric để tối ưu hóa thông lượng và giảm độ trễ của mạng.
+    \item Phát triển chi tiết mô hình tích hợp AI: Thiết kế và thử nghiệm các mô-đun AI cho việc quản lý sự đồng ý thông minh và học máy liên hợp (Federated Learning) trên nền tảng đã đề xuất.
+    \item Xây dựng hành lang pháp lý: Kiến nghị các cơ quan quản lý nhà nước nghiên cứu và ban hành các quy định, hướng dẫn cụ thể cho việc ứng dụng công nghệ blockchain trong quản lý dữ liệu y tế, tạo điều kiện thuận lợi cho việc triển khai trên diện rộng
+\end{itemize}
+\end{document}

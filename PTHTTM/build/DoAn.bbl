@@ -1,0 +1,433 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global/global}
+  \entry{chun2023representation}{inproceedings}{}{}
+    \name{author}{3}{}{%
+      {{hash=CS}{%
+         family={Chun},
+         familyi={C\bibinitperiod},
+         given={Sungho},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=PS}{%
+         family={Park},
+         familyi={P\bibinitperiod},
+         given={Sungbum},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CJY}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Ju\bibnamedelima Yong},
+         giveni={J\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{CS+1}
+    \strng{fullhash}{CSPSCJY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2023 IEEE international conference on image processing
+  (ICIP)}
+    \field{pages}{670\bibrangedash 674}
+    \field{title}{Representation learning of vertex heatmaps for 3D human mesh
+  reconstruction from multi-view images}
+    \field{year}{2023}
+  \endentry
+
+  \entry{gupta2018introduction}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=GA}{%
+         family={Gupta},
+         familyi={G\bibinitperiod},
+         given={Amit},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GA1}
+    \strng{fullhash}{GA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{22\bibrangedash 29}
+    \field{title}{Introduction to deep learning: Part 1}
+    \field{volume}{114}
+    \field{journaltitle}{Chem. Eng. Prog}
+    \field{year}{2018}
+  \endentry
+
+  \entry{o2015introduction}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=OK}{%
+         family={O'shea},
+         familyi={O\bibinitperiod},
+         given={Keiron},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=NR}{%
+         family={Nash},
+         familyi={N\bibinitperiod},
+         given={Ryan},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{OKNR1}
+    \strng{fullhash}{OKNR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{An introduction to convolutional neural networks}
+    \field{journaltitle}{arXiv preprint arXiv:1511.08458}
+    \field{year}{2015}
+  \endentry
+
+  \entry{hassoun1995fundamentals}{book}{}{}
+    \name{author}{1}{}{%
+      {{hash=HMH}{%
+         family={Hassoun},
+         familyi={H\bibinitperiod},
+         given={Mohamad\bibnamedelima H},
+         giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {MIT press}%
+    }
+    \strng{namehash}{HMH1}
+    \strng{fullhash}{HMH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Fundamentals of artificial neural networks}
+    \field{year}{1995}
+  \endentry
+
+  \entry{schroff2015facenet}{inproceedings}{}{}
+    \name{author}{3}{}{%
+      {{hash=SF}{%
+         family={Schroff},
+         familyi={S\bibinitperiod},
+         given={Florian},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Kalenichenko},
+         familyi={K\bibinitperiod},
+         given={Dmitry},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=PJ}{%
+         family={Philbin},
+         familyi={P\bibinitperiod},
+         given={James},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SF+1}
+    \strng{fullhash}{SFKDPJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the IEEE conference on computer vision and
+  pattern recognition}
+    \field{pages}{815\bibrangedash 823}
+    \field{title}{Facenet: A unified embedding for face recognition and
+  clustering}
+    \field{year}{2015}
+  \endentry
+
+  \entry{swaminathan2020gender}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=SA}{%
+         family={Swaminathan},
+         familyi={S\bibinitperiod},
+         given={Avinash},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Chaba},
+         familyi={C\bibinitperiod},
+         given={Mridul},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SDK}{%
+         family={Sharma},
+         familyi={S\bibinitperiod},
+         given={Deepak\bibnamedelima Kumar},
+         giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=CY}{%
+         family={Chaba},
+         familyi={C\bibinitperiod},
+         given={Yogesh},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{SA+1}
+    \strng{fullhash}{SACMSDKCY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{2634\bibrangedash 2642}
+    \field{title}{Gender classification using facial embeddings: A novel
+  approach}
+    \field{volume}{167}
+    \field{journaltitle}{Procedia Computer Science}
+    \field{year}{2020}
+  \endentry
+
+  \entry{wang2018cosfacelargemargincosine}{misc}{}{}
+    \name{author}{8}{}{%
+      {{hash=WH}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Hao},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yitong},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZZ}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Zheng},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=JX}{%
+         family={Ji},
+         familyi={J\bibinitperiod},
+         given={Xing},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=GD}{%
+         family={Gong},
+         familyi={G\bibinitperiod},
+         given={Dihong},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Jingchao},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LZ}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Zhifeng},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=LW}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Wei},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WH+1}
+    \strng{fullhash}{WHWYZZJXGDZJLZLW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1801.09414
+    \endverb
+    \field{title}{CosFace: Large Margin Cosine Loss for Deep Face Recognition}
+    \verb{url}
+    \verb https://arxiv.org/abs/1801.09414
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2018}
+  \endentry
+
+  \entry{pinFace}{misc}{}{}
+    \name{author}{1}{}{%
+      {{hash=B}{%
+         family={Burak},
+         familyi={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{B1}
+    \strng{fullhash}{B1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+  \field{howpublished}{\url{https://www.kaggle.com/datasets/hereisburak/pins-face-recognition}}
+    \field{note}{[Accessed 07-10-2025]}
+    \field{title}{Pins Face Recognition}
+  \endentry
+
+  \entry{huang:inria-00321923}{inproceedings}{}{}
+    \name{author}{4}{}{%
+      {{hash=HGB}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Gary\bibnamedelima B.},
+         giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Mattar},
+         familyi={M\bibinitperiod},
+         given={Marwan},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Berg},
+         familyi={B\bibinitperiod},
+         given={Tamara},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=LME}{%
+         family={Learned-Miller},
+         familyi={L\bibinithyphendelim M\bibinitperiod},
+         given={Eric},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {{Erik Learned-Miller and Andras Ferencz and Fr{\'e}d{\'e}ric Jurie}}%
+    }
+    \strng{namehash}{HGB+1}
+    \strng{fullhash}{HGBMMBTLME1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{{Workshop on Faces in 'Real-Life' Images: Detection,
+  Alignment, and Recognition}}
+    \field{title}{{Labeled Faces in the Wild: A Database forStudying Face
+  Recognition in Unconstrained Environments}}
+    \verb{url}
+    \verb https://inria.hal.science/inria-00321923
+    \endverb
+    \list{location}{1}{%
+      {Marseille, France}%
+    }
+    \verb{file}
+    \verb https://inria.hal.science/inria-00321923v1/file/Huang_long_eccv2008-l
+    \verb fw.pdf
+    \endverb
+    \field{month}{10}
+    \field{year}{2008}
+  \endentry
+
+  \entry{expressjsExpressNodejs}{misc}{}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://expressjs.com/}}
+    \field{note}{[Accessed 04-10-2025]}
+    \field{title}{{E}xpress - {N}ode.js web application framework ---
+  expressjs.com}
+  \endentry
+
+  \entry{key}{misc}{}{}
+    \field{howpublished}{\url{Node.js Foundation}}
+    \field{note}{[Accessed 07-10-2025]}
+  \endentry
+
+  \entry{opencvOpenCVOpenCV}{misc}{}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://docs.opencv.org/4.x/index.html}}
+    \field{note}{[Accessed 07-10-2025]}
+    \field{title}{{O}pen{C}{V}: {O}pen{C}{V} modules --- docs.opencv.org}
+  \endentry
+
+  \entry{reactReact}{misc}{}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://react.dev/}}
+    \field{note}{[Accessed 07-10-2025]}
+    \field{title}{{R}eact --- react.dev}
+  \endentry
+
+  \entry{python}{misc}{}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://www.python.org/}}
+    \field{note}{[Accessed 07-10-2025]}
+    \field{title}{python.org}
+  \endentry
+
+  \entry{tensorflowTensorFlow}{misc}{}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://www.tensorflow.org/}}
+    \field{note}{[Accessed 07-10-2025]}
+    \field{title}{{T}ensor{F}low --- tensorflow.org}
+  \endentry
+
+  \entry{wikipediaMicrosoftServer}{misc}{}{}
+    \field{labeltitlesource}{title}
+  \field{howpublished}{\url{https://vi.wikipedia.org/wiki/Microsoft_SQL_Server}}
+    \field{note}{[Accessed 07-10-2025]}
+    \field{title}{{M}icrosoft {S}{Q}{L} {S}erver – {W}ikipedia tiếng
+  {V}iệt --- vi.wikipedia.org}
+  \endentry
+
+  \entry{kewate2022review}{article}{}{}
+    \name{author}{5}{}{%
+      {{hash=KN}{%
+         family={Kewate},
+         familyi={K\bibinitperiod},
+         given={Neha},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Raut},
+         familyi={R\bibinitperiod},
+         given={Amruta},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Dubekar},
+         familyi={D\bibinitperiod},
+         given={Mohit},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RY}{%
+         family={Raut},
+         familyi={R\bibinitperiod},
+         given={Yuvraj},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Patil},
+         familyi={P\bibinitperiod},
+         given={Ankush},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KN+1}
+    \strng{fullhash}{KNRADMRYPA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{258\bibrangedash 263}
+    \field{title}{A review on AWS-cloud computing technology}
+    \field{volume}{10}
+    \field{journaltitle}{International Journal for Research in Applied Science
+  and Engineering Technology}
+    \field{year}{2022}
+  \endentry
+
+  \entry{trychromaChroma}{misc}{}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://www.trychroma.com/}}
+    \field{note}{[Accessed 07-10-2025]}
+    \field{title}{{C}hroma --- trychroma.com}
+  \endentry
+\enddatalist
+\endinput

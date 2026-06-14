@@ -1,0 +1,33 @@
+\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+
+\section{Tìm hiểu \textit{Phát triển hệ thống phát hiện người mất tích dựa trên dữ liệu ảnh chụp}}
+Trong bối cảnh xã hội hiện nay, tình trạng người mất tích, đặc biệt là trẻ em và người cao tuổi, đang ngày càng trở thành một vấn đề đáng lo ngại. Việc tìm kiếm và xác minh thông tin liên quan đến người mất tích thường gặp nhiều khó khăn do dữ liệu phân tán, thiếu hệ thống, và phụ thuộc nhiều vào sự hỗ trợ thủ công từ cộng đồng hoặc cơ quan chức năng. Điều này dẫn đến việc xử lý chậm trễ, làm giảm khả năng tìm lại người mất tích trong thời gian quan trọng.
+
+Với sự phát triển mạnh mẽ của trí tuệ nhân tạo (AI) và học sâu (Deep Learning), đặc biệt trong lĩnh vực nhận diện và xử lý ảnh, việc ứng dụng công nghệ để hỗ trợ công tác tìm kiếm người mất tích trở nên khả thi và có tính thực tiễn cao. Các kỹ thuật như phát hiện khuôn mặt (Face Detection), trích xuất đặc trưng (Feature Extraction), và nhận dạng khuôn mặt (Face Recognition) đã đạt được độ chính xác cao trong nhiều ứng dụng thực tế.
+
+Đề tài “Phát triển hệ thống phát hiện người mất tích dựa trên dữ liệu ảnh chụp” nhằm mục tiêu xây dựng một hệ thống hỗ trợ tìm kiếm và nhận diện người mất tích thông qua cơ sở dữ liệu ảnh chụp. Hệ thống sẽ tiếp nhận ảnh từ nhiều nguồn khác nhau (gia đình, cơ quan chức năng, camera giám sát, mạng xã hội), sau đó tiến hành xử lý ảnh, trích xuất đặc trưng và đối sánh với cơ sở dữ liệu người mất tích để đưa ra kết quả nhận diện.
+
+Bên cạnh việc hỗ trợ công tác truy tìm, hệ thống còn hướng đến tính ứng dụng thực tiễn trong việc tích hợp với các nền tảng quản lý dữ liệu và hệ thống cảnh báo, góp phần nâng cao hiệu quả phối hợp giữa cộng đồng và cơ quan chức năng trong việc tìm kiếm và bảo vệ con người.
+
+\section{Hiện trạng thực tế}
+Hiện nay, tình trạng người mất tích, đặc biệt là trẻ em và người cao tuổi, đang trở thành một vấn đề xã hội đáng lo ngại tại nhiều quốc gia, trong đó có Việt Nam. Theo thống kê từ các cơ quan chức năng, mỗi năm ghi nhận hàng nghìn trường hợp mất tích với nguyên nhân đa dạng như lạc đường, sa sút trí nhớ, bị bắt cóc, hoặc tự ý rời khỏi nhà. Đáng chú ý, thời gian phản ứng và tìm kiếm ban đầu đóng vai trò vô cùng quan trọng, càng tìm được sớm, cơ hội an toàn của người mất tích càng cao.
+
+Tuy nhiên, các phương pháp tìm kiếm truyền thống hiện nay vẫn còn nhiều hạn chế. Việc đăng tin tìm người trên mạng xã hội, in tờ rơi, dán thông báo, hoặc thông báo trên phương tiện truyền thông chủ yếu mang tính thủ công, phụ thuộc nhiều vào yếu tố may mắn và sự chú ý của cộng đồng. Những cách này thiếu tính tự động, khó mở rộng quy mô, và thường không đem lại hiệu quả cao trong các khu vực đô thị đông đúc hoặc vùng có mật độ camera an ninh lớn.
+
+Trong bối cảnh đô thị hiện đại, một nguồn dữ liệu lớn nhưng chưa được khai thác triệt để là hệ thống camera giám sát (CCTV) và các nguồn ảnh, video khác (camera cửa hàng, camera giao thông, camera gia đình, điện thoại di động). Các nguồn này cung cấp lượng hình ảnh, video khổng lồ, nhưng việc rà soát thủ công hàng trăm đến hàng nghìn giờ video để tìm kiếm một khuôn mặt cụ thể là không khả thi. Do đó, nhiều tình huống bỏ lỡ “thời gian vàng” để phát hiện dấu vết đầu tiên của người mất tích.
+
+Bên cạnh đó, việc chia sẻ và phối hợp thông tin giữa các cơ quan, tổ chức và cộng đồng trong quá trình tìm kiếm vẫn chưa được đồng bộ, thiếu một hệ thống trung tâm có khả năng tự động nhận dạng, cảnh báo và hỗ trợ tìm kiếm người mất tích một cách thông minh, nhanh chóng và chính xác.
+
+Từ thực trạng trên có thể thấy, nhu cầu ứng dụng công nghệ nhận dạng khuôn mặt, trí tuệ nhân tạo (AI) và phân tích video tự động trong công tác tìm kiếm người mất tích là cấp thiết. Việc xây dựng một hệ thống thông minh có khả năng phát hiện, định danh và thông báo khi phát hiện người có đặc điểm khuôn mặt trùng khớp trong các nguồn dữ liệu thu thập được có thể rút ngắn đáng kể thời gian tìm kiếm, tăng khả năng thành công và hỗ trợ đắc lực cho lực lượng chức năng cũng như gia đình nạn nhân.
+
+\section{Giải pháp đề xuất}
+Trước thực trạng khó khăn trong việc tìm kiếm người mất tích, đề tài đề xuất xây dựng “Hệ thống phát hiện người mất tích dựa trên nhận dạng khuôn mặt”, ứng dụng công nghệ Trí tuệ nhân tạo và Thị giác máy tính nhằm tự động hóa quá trình tìm kiếm, nhận dạng và cảnh báo.
+
+Cụ thể, hệ thống cho phép gia đình hoặc cơ quan chức năng cung cấp hình ảnh người mất tích (ảnh chụp gần nhất, ảnh chân dung, hoặc ảnh trích xuất từ video). Sau khi tiếp nhận, hệ thống sẽ sử dụng mô hình nhận dạng khuôn mặt để trích xuất đặc trưng khuôn mặt và tiến hành so khớp tự động với dữ liệu hình ảnh, video thu thập được từ các camera an ninh, camera giao thông, hoặc nguồn dữ liệu công cộng được cấp phép. Khi phát hiện khuôn mặt có độ tương đồng cao so với người cần tìm, hệ thống sẽ ghi nhận, lưu lại vị trí, thời gian và camera nguồn, đồng thời gửi cảnh báo tới người thân hoặc cơ quan phụ trách.
+
+Giải pháp hướng đến việc rút ngắn thời gian rà soát dữ liệu, tăng tỷ lệ phát hiện chính xác, và tận dụng tối đa nguồn dữ liệu camera sẵn có, giúp hỗ trợ quá trình tìm kiếm được tiến hành nhanh chóng, có hệ thống và hiệu quả hơn.
+\section{Cấu trúc báo cáo}
+Báo cáo được tổ chức như sau: Chương II trình bày Cơ sở lý thuyết và công nghệ sử dụng, Chương III trình bày Phân tích thiết kế hệ thống, Chương IV xây dụng hệ thống, Chương V tổng kết và hướng phát triển.
+
+\end{document}
